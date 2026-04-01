@@ -1,56 +1,62 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { 
-  ShieldCheck, 
-  FileText, 
-  Lock, 
-  AlertTriangle, 
+import {
+  ShieldCheck,
+  FileText,
+  Lock,
+  AlertTriangle,
   Zap,
   CheckCircle2,
-  ExternalLink 
+  ExternalLink
 } from "lucide-react"
 
 // --- DATOS EXACTOS DE LA TABLA DE ARCHIVOS ---
 const politicasFiles = [
   {
+    title: "Reglamento Interno de Trabajo",
+    fileName: "RIT-RIOPAILA-AGRICOLA.pdf",
+    icon: FileText,
+    theme: "slate"
+  },
+  {
     title: "Política de Conflicto de Interés",
-    fileName: "politicasycumplimientos/GNE1-PO04.pdf",
+    fileName: "GNE1-PO04.pdf",
     icon: FileText,
     theme: "slate"
   },
   {
     title: "Prevención Lavado de Activos y Financiación del Terrorismo",
-    fileName: "politicasycumplimientos/PO-FOF-001-PREVENCION-LAVADO-DE-ACTIVOS-Y-FINANCIACION-DEL-TERRRORISMO-1.pdf",
+    fileName: "PO-FOF-001-PREVENCION-LAVADO-DE-ACTIVOS-Y-FINANCIACION-DEL-TERRRORISMO.pdf",
     icon: ShieldCheck,
-    theme: "red" // <- Cambiado a rojo
+    theme: "slate"
   },
   {
-    title: "Certificado de Nombramiento Oficial de Cumplimiento",
-    fileName: "politicasycumplimientos/Certificado-Nombramiento-Oficial-de-Cumplimiento-Castilla.pdf",
+    title: "Certificado de Lavado de Activos y de la Financiación del Terrorismo - SARLAFT",
+    fileName: "Certificado-de-Lavado-de-Activos-y-de-la-Financiación-del-Terrorismo_SIPLA_FT.pdf",
     icon: ShieldCheck,
     theme: "slate"
   },
   {
     title: "Política de Tratamiento de Datos Personales",
-    fileName: "politicasycumplimientos/PO-DNE-003-TRATAMIENTO-DATOS-PERSONALES-CASTILLA.pdf",
+    fileName: "PO-DNE-003-TRATAMIENTO-DATOS-PERSONALES-RIOPAILA.pdf",
     icon: Lock,
     theme: "slate"
   },
   {
     title: "Código de Ética y Conducta Empresarial",
-    fileName: "politicasycumplimientos/PO-BEC-001-CODIGO-DE-ETICA-Y-CONDUCTA-EMPRESARIAL-CAST.pdf",
+    fileName: "PO-BEC-001-CODIGO-DE-ETICA-Y-CONDUCTA-EMPRESARIAL-RIOP-V2.pdf",
     icon: FileText,
-    theme: "red" // <- Cambiado a rojo
+    theme: "red"
   }
 ]
 
 export default function PoliticasCumplimientoPage() {
   return (
     <div className="min-h-screen bg-[#f8fafc] pb-24 font-[Tahoma,Verdana,sans-serif]">
-      
+
       {/* HEADER */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         className="pt-20 px-6 text-center max-w-4xl mx-auto mb-16"
@@ -81,16 +87,16 @@ export default function PoliticasCumplimientoPage() {
             <div className={`w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50 mb-6 ${file.theme === 'red' ? 'text-red-700' : 'text-slate-400'} group-hover:scale-110 transition-transform`}>
               <file.icon size={24} />
             </div>
-            
+
             <h3 className="text-lg font-bold text-[#1a2b3c] mb-6 flex-grow leading-snug">
               {file.title}
             </h3>
-            
+
             {/* --- BOTÓN ÚNICO DE VISUALIZACIÓN --- */}
             <div className="w-full mt-auto">
-              <a 
-                href={`/docs/${file.fileName}`} 
-                target="_blank" 
+              <a
+                href={`/docs/${file.fileName}`}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 p-3 rounded-xl bg-red-50 text-red-800 text-[11px] font-bold hover:bg-red-800 hover:text-white transition-colors group/btn"
                 title="Abrir en pestaña nueva"
@@ -104,7 +110,7 @@ export default function PoliticasCumplimientoPage() {
 
       {/* SECCIÓN INFORMATIVA FINAL */}
       <section className="max-w-5xl mx-auto px-6 mt-24">
-        <motion.div 
+        <motion.div
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -122,10 +128,10 @@ export default function PoliticasCumplimientoPage() {
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 flex items-center justify-center">
-               <ShieldCheck size={80} className="opacity-20 absolute" />
-               <p className="text-center italic font-light opacity-90">
+              <ShieldCheck size={80} className="opacity-20 absolute" />
+              <p className="text-center italic font-light opacity-90">
                 "La ética empresarial es el cimiento de nuestra sostenibilidad en el campo colombiano."
-               </p>
+              </p>
             </div>
           </div>
         </motion.div>

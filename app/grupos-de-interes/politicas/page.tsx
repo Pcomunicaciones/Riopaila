@@ -6,16 +6,16 @@ import { motion, Variants } from "framer-motion"
 // Definimos los documentos y sus nombres de archivo reales
 const documentos = [
   { 
-    nombre: "Reglamento Interno de Trabajo", 
-    file: "reglamento-trabajo.pdf" 
+    nombre: "Reglamento Comité Auditoria y Riesgos", 
+    file: "Reglamento-Comité-Auditoria-y-Riesgos.pdf" 
   },
   { 
     nombre: "Política de Tratamiento de Datos", 
-    file: "datos-personales.pdf" 
+    file: "PO-DNE-003-TRATAMIENTO-DATOS-PERSONALES-RIOPAILA.pdf" 
   },
   { 
     nombre: "Código de Ética y Conducta", 
-    file: "codigo-etica.pdf" 
+    file: "PO-BEC-001-CODIGO-DE-ETICA-Y-CONDUCTA-EMPRESARIAL-RIOP-V2.pdf" 
   },
 ]
 
@@ -79,7 +79,7 @@ export default function PoliticasPage() {
 
             {/* Botón de descarga dinámico */}
             <a 
-              href={`/documentos/politicas/${doc.file}`} 
+              href={`/docs/${doc.file}`} 
               download={doc.file}
               className="p-3 bg-[#f1f8e9] hover:bg-[#a3c74a] text-[#006437] rounded-full transition-all duration-300"
               title="Descargar documento"

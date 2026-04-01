@@ -7,10 +7,10 @@ import { Leaf, Droplets, Sun, Users, ArrowUpRight, Sparkles } from "lucide-react
 // --- DATOS DE LAS INICIATIVAS (DATA) ---
 // Aquí definimos las tarjetas. Cada una tiene su ícono, título, descripción y color de acento.
 const items = [
-  { icon: Leaf, title: "Agricultura Responsable", desc: "Prácticas que regeneran el ecosistema mediante nutrición orgánica.", col: "#a3c74a" },
-  { icon: Droplets, title: "Gestión del Agua", desc: "Riego por goteo y monitoreo en tiempo real para preservar acuíferos.", col: "#60a5fa" },
-  { icon: Sun, title: "Energía Limpia", desc: "Paneles solares y biomasa para reducir nuestra huella de carbono.", col: "#fbbf24" },
-  { icon: Users, title: "Impacto Social", desc: "Fortalecemos el tejido social mediante educación y empleo digno.", col: "#f87171" },
+  { icon: Leaf, title: "Agricultura Responsable", desc: "Prácticas que regeneran el ecosistema mediante nutrición orgánica.", col: "#dc2626" }, // Red-600
+  { icon: Droplets, title: "Gestión del Agua", desc: "Riego por goteo y monitoreo en tiempo real para preservar acuíferos.", col: "#991b1b" }, // Red-800
+  { icon: Sun, title: "Energía Limpia", desc: "Paneles solares y biomasa para reducir nuestra huella de carbono.", col: "#ea580c" }, // Orange-600 (kept as contrast but can be red-soft)
+  { icon: Users, title: "Impacto Social", desc: "Fortalecemos el tejido social mediante educación y empleo digno.", col: "#b91c1c" }, // Red-700
 ]
 
 export function SustainabilitySection() {
@@ -36,8 +36,8 @@ export function SustainabilitySection() {
   const spotlightX = useSpring(mouseX, { stiffness: 40, damping: 25, mass: 0.8 })
   const spotlightY = useSpring(mouseY, { stiffness: 40, damping: 25, mass: 0.8 })
 
-  // Armamos el gradiente dinámico de la linterna verde.
-  const spotlightBackground = useMotionTemplate`radial-gradient(600px circle at ${spotlightX}px ${spotlightY}px, rgba(0, 100, 55, 0.35), transparent 85%)`
+  // Armamos el gradiente dinámico de la linterna roja.
+  const spotlightBackground = useMotionTemplate`radial-gradient(600px circle at ${spotlightX}px ${spotlightY}px, rgba(153, 27, 27, 0.25), transparent 85%)`
 
   useEffect(() => {
     // Escuchamos el mouse, pero usamos requestAnimationFrame para no estresar la página.
@@ -75,7 +75,7 @@ export function SustainabilitySection() {
             ====================================================================== */}
         <img 
           src="/Imagenes/DSC_0279.jpg" 
-          alt="Sostenibilidad Castilla Agrícola" 
+          alt="Sostenibilidad Riopaila Agrícola" 
           loading="lazy"
           className="w-full h-full object-cover opacity-40" 
         />
@@ -88,7 +88,7 @@ export function SustainabilitySection() {
         />
         
         {/* Degradados oscuros arriba y abajo para que la sección se fusione bien con el resto de la web */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#001a0e] via-transparent to-[#001a0e] z-20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1a0000] via-transparent to-[#1a0000] z-20" />
       </motion.div>
 
       {/* --- EL CONTENIDO DEL FRENTE (Z-30) --- */}
@@ -105,9 +105,9 @@ export function SustainabilitySection() {
             initial={{ rotate: -10, opacity: 0 }}
             animate={isInView ? { rotate: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex items-center gap-2 px-5 py-1.5 border border-castilla-yellow/40 bg-castilla-yellow/10 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.4em] mb-8 will-change-transform"
+            className="flex items-center gap-2 px-5 py-1.5 border border-red-800/40 bg-red-800/10 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.4em] mb-8 will-change-transform"
           >
-            <Sparkles size={14} className="animate-pulse text-castilla-yellow" /> SOSTENIBILIDAD
+            <Sparkles size={14} className="animate-pulse text-red-600" /> SOSTENIBILIDAD
           </motion.div>
           {/* ====================================================================== */}
 
@@ -130,7 +130,7 @@ export function SustainabilitySection() {
               initial={{ scale: 0.5, rotate: -10, opacity: 0 }}
               animate={isInView ? { scale: 1, rotate: 0, opacity: 1 } : {}}
               transition={{ delay: 0.4, type: "spring", stiffness: 200, damping: 15 }}
-              className="text-castilla-yellow inline-block ml-2 drop-shadow-[0_0_15px_rgba(250,204,21,0.5)] will-change-transform"
+              className="text-red-700 inline-block ml-2 drop-shadow-[0_0_15px_rgba(153,27,27,0.5)] will-change-transform"
             >
               futuro
             </motion.span>
@@ -179,7 +179,7 @@ export function SustainabilitySection() {
 
               {/* Footer de la tarjeta con firma y flecha */}
               <div className="flex justify-between items-center mt-4">
-                <span className="text-[10px] text-white/40 font-bold uppercase tracking-widest">Castilla 2026</span>
+                <span className="text-[10px] text-white/40 font-bold uppercase tracking-widest">Riopaila 2026</span>
                 {/* La flechita gira 45 grados en hover */}
                 <motion.div
                   whileHover={{ rotate: 45, scale: 1.1 }}

@@ -5,22 +5,22 @@ import { motion, Variants } from "framer-motion"
 
 const informes = [
   { 
-    year: "2024", 
-    title: "Informe de Sostenibilidad", 
-    size: "4.2 MB", 
-    fileName: "informe-sostenibilidad-2024.pdf" 
-  },
-  { 
     year: "2023", 
-    title: "Reporte de Gestión Ambiental", 
-    size: "3.8 MB", 
-    fileName: "reporte-ambiental-2023.pdf" 
+    title: "Informe de Gestión y Sostenibilidad", 
+    size: "25.5 MB", 
+    fileName: "Riopaila-Informe-de-Gestion-y-Sostenibilidad-2023-1.pdf" 
   },
   { 
     year: "2022", 
-    title: "Balance Social Consolidado", 
-    size: "5.1 MB", 
-    fileName: "balance-social-2022.pdf" 
+    title: "Informe de Gestión", 
+    size: "119.9 MB", 
+    fileName: "Informe-de-gestion-RIOPAILA-2022.pdf" 
+  },
+  { 
+    year: "2021", 
+    title: "Informe de Gestión", 
+    size: "36.4 MB", 
+    fileName: "INFORME-DE-GESTION-RIOPAILA-2021-ASAMBLEA.pdf" 
   },
 ]
 
@@ -86,7 +86,7 @@ export default function InformesPage() {
 
             {/* Botón de Descarga Real */}
             <a 
-              href={`/documentos/informes/${doc.fileName}`} 
+              href={`/docs/${doc.fileName}`} 
               download={doc.fileName}
               className="flex items-center justify-center gap-2 bg-red-800 text-white px-8 py-3 rounded-2xl text-sm font-bold hover:bg-red-600 transition-all duration-300 shadow-lg shadow-red-900/10"
             >

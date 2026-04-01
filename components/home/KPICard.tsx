@@ -55,30 +55,30 @@ export function KPICard({ value, suffix = "", label, description, delay = 0 }: K
         style={{
           background: useTransform(
             [mouseX, mouseY],
-            ([x, y]) => `radial-gradient(300px circle at ${x}px ${y}px, rgba(250, 204, 21, 0.15), transparent 80%)`
+            ([x, y]) => `radial-gradient(300px circle at ${x}px ${y}px, rgba(153, 27, 27, 0.15), transparent 80%)`
           )
         }}
       />
-
-      <div className="relative z-10">
-        <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter flex items-baseline gap-1">
-          <motion.span>{displayValue}</motion.span>
-          <span className="text-castilla-yellow text-4xl group-hover:scale-125 transition-transform duration-500">{suffix}</span>
+  
+        <div className="relative z-10">
+          <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter flex items-baseline gap-1">
+            <motion.span>{displayValue}</motion.span>
+            <span className="text-red-500 text-4xl group-hover:scale-125 transition-transform duration-500">{suffix}</span>
+          </div>
+          
+          <h3 className="text-xl font-black text-white uppercase tracking-[0.2em] mb-3">
+            {label}
+          </h3>
+          
+          <div className="w-12 h-1 bg-red-600 rounded-full mb-6 group-hover:w-full transition-all duration-1000" />
+          
+          <p className="text-base text-white/60 leading-relaxed font-light">
+            {description}
+          </p>
         </div>
-        
-        <h3 className="text-xl font-black text-white uppercase tracking-[0.2em] mb-3">
-          {label}
-        </h3>
-        
-        <div className="w-12 h-1 bg-castilla-yellow rounded-full mb-6 group-hover:w-full transition-all duration-1000" />
-        
-        <p className="text-base text-white/60 leading-relaxed font-light">
-          {description}
-        </p>
-      </div>
-
-      {/* Efecto de borde brillante lateral */}
-      <div className="absolute top-0 left-0 w-[2px] h-0 group-hover:h-full bg-gradient-to-b from-transparent via-castilla-yellow to-transparent transition-all duration-700" />
+  
+        {/* Efecto de borde brillante lateral */}
+        <div className="absolute top-0 left-0 w-[2px] h-0 group-hover:h-full bg-gradient-to-b from-transparent via-red-600 to-transparent transition-all duration-700" />
     </motion.div>
   )
 }

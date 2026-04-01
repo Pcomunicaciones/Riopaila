@@ -17,7 +17,7 @@ const AnimatedNumber = ({ end, decimals = 0, duration = 2000, prefix = "", suffi
     const updateCounter = (timestamp: number) => {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / duration, 1)
-      
+
       const easeProgress = 1 - Math.pow(1 - progress, 4)
       setValue(end * easeProgress)
 
@@ -39,11 +39,12 @@ export default function ProyectosInmobiliariosPage() {
   return (
     // Forzamos Tahoma en toda la vista y un fondo súper limpio
     <div className="space-y-12 pb-16 bg-[#fafbfc] min-h-screen" style={{ fontFamily: 'Tahoma, Geneva, sans-serif' }}>
-      
+
       {/* AQUÍ AGREGAMOS LA ANIMACIÓN CSS NATIVA PARA EL RADAR DEL MAPA. 
         Esto evita que se trabe, garantizando 60fps constantes.
       */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes smoothRadar {
           0% { transform: scale(0.5); opacity: 0.8; }
           100% { transform: scale(3.5); opacity: 0; }
@@ -51,25 +52,25 @@ export default function ProyectosInmobiliariosPage() {
       `}} />
 
       {/* ================= HERO SECTION ================= */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         className="relative h-[400px] md:h-[500px] rounded-b-[3rem] md:rounded-[3rem] overflow-hidden flex items-center justify-center text-center shadow-2xl mx-0 md:mx-4 lg:mx-8 mt-0 md:mt-8"
       >
-        <img 
-          src="/Imagenes/Exportado 2.jpg" 
+        <img
+          src="/Imagenes/proyecto-inmobiliario.png"
           alt="Terrenos y Proyectos Riopaila"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Degradado rojo oscuro característico de Riopaila */}
-        <div 
-          className="absolute inset-0" 
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(127,29,29,0.8), rgba(127,29,29,1))' }} 
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(127,29,29,0.8), rgba(127,29,29,1))' }}
         />
-        
+
         <div className="relative z-10 text-white px-6 mt-12">
-          <motion.span 
+          <motion.span
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -85,9 +86,9 @@ export default function ProyectosInmobiliariosPage() {
 
       {/* ================= CONTENIDO PRINCIPAL ================= */}
       <div className="max-w-5xl mx-auto px-6 space-y-12">
-        
+
         {/* 1. ESTRATEGIA (Texto Introductorio) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -95,14 +96,14 @@ export default function ProyectosInmobiliariosPage() {
         >
           {/* Detalle decorativo superior */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1.5 bg-[#dc2626] rounded-b-full" />
-          
+
           <p className="text-lg md:text-2xl text-[#475569] font-normal leading-relaxed">
             Los proyectos especiales de tipo inmobiliario forman parte de la <strong className="text-[#7f1d1d]">estrategia de diversificación y optimización de activos</strong>, contribuyendo a la generación de ingresos complementarios y al fortalecimiento del desempeño económico de la organización.
           </p>
         </motion.div>
 
         {/* 2. HITO 2025: LOTE COOPERATIVA */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -110,7 +111,7 @@ export default function ProyectosInmobiliariosPage() {
           className="bg-gradient-to-br from-white to-[#fef2f2] rounded-[3rem] p-1 md:p-2 shadow-[0_20px_50px_-15px_rgba(220,38,38,0.1)] border border-[#fee2e2]"
         >
           <div className="bg-white rounded-[2.8rem] p-6 md:p-12 h-full flex flex-col">
-            
+
             {/* --- PARTE SUPERIOR: TEXTOS Y CIFRAS --- */}
             <div>
               {/* Encabezado */}
@@ -167,32 +168,32 @@ export default function ProyectosInmobiliariosPage() {
 
             {/* --- PARTE INFERIOR: MAPA ANIMADO CON HOVER --- */}
             <div className="relative w-full h-[400px] bg-[#f8fafc] rounded-[2rem] border border-gray-200 overflow-hidden shadow-inner flex items-center justify-center">
-              
+
               {/* Fondo vectorial abstracto (Simula geografía/cuadrícula) */}
               <svg className="absolute inset-0 w-full h-full opacity-30 pointer-events-none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <pattern id="gridPattern" width="60" height="60" patternUnits="userSpaceOnUse">
-                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#cbd5e1" strokeWidth="1"/>
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#cbd5e1" strokeWidth="1" />
                   </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#gridPattern)" />
                 {/* Líneas simulando el relieve o vías */}
-                <path d="M-100,100 Q300,250 400,450 T900,550" fill="none" stroke="#94a3b8" strokeWidth="4" strokeLinecap="round" opacity="0.4"/>
-                <path d="M0,500 Q400,300 600,200 T1200,150" fill="none" stroke="#e2e8f0" strokeWidth="16" strokeLinecap="round" opacity="0.3"/>
+                <path d="M-100,100 Q300,250 400,450 T900,550" fill="none" stroke="#94a3b8" strokeWidth="4" strokeLinecap="round" opacity="0.4" />
+                <path d="M0,500 Q400,300 600,200 T1200,150" fill="none" stroke="#e2e8f0" strokeWidth="16" strokeLinecap="round" opacity="0.3" />
               </svg>
 
               {/* Contenedor Interactivo del Pin (Group para el hover) */}
               <div className="relative z-10 flex flex-col items-center justify-center group cursor-pointer w-48 h-48">
-                
+
                 {/* Ondas expansivas CSS NATIVO (Mucho más fluido que Framer Motion) */}
                 <div className="absolute w-12 h-12 bg-[#dc2626] rounded-full animate-[smoothRadar_2.5s_cubic-bezier(0,0,0.2,1)_infinite]" />
                 <div className="absolute w-12 h-12 bg-[#fca5a5] rounded-full animate-[smoothRadar_2.5s_cubic-bezier(0,0,0.2,1)_infinite]" style={{ animationDelay: '1s' }} />
-                
+
                 {/* Icono del Pin (Fijo en el centro, sube un poquito en hover) */}
                 <div className="relative z-20 text-[#dc2626] drop-shadow-lg pb-2 transition-transform duration-300 group-hover:-translate-y-2">
                   <MapPin size={56} fill="white" strokeWidth={1.5} />
                 </div>
-                
+
                 {/* Etiqueta de la Ubicación (Oculta por defecto, aparece en Hover) 
                   Aparece desde abajo hacia arriba suavemente
                 */}

@@ -15,21 +15,21 @@ const quickLinks = [
     title: "Quiénes Somos",
     description: "Conoce nuestra misión, visión y valores que nos definen como empresa líder.",
     href: "/compania/quienes-somos",
-    color: "from-[#004a29] to-[#006437]", // Verde muy oscuro a verde corporativo
+    color: "from-[#450a0a] to-[#7f1d1d]", // Red-950 to red-900
   },
   {
     icon: History,
     title: "Historia y Evolución",
     description: "Más de 70 años de trayectoria transformando con pasión el campo colombiano.",
     href: "/compania/historia",
-    color: "from-[#006437] to-[#048450]", // Verde corporativo a verde esmeralda
+    color: "from-[#991b1b] to-[#dc2626]", // Red-800 to red-600
   },
   {
     icon: Users2,
     title: "Gobierno Corporativo",
     description: "Estructura organizacional basada en la transparencia, ética y responsabilidad.",
-    href: "/compania/gobierno-corporate", // Ojo: Verifica que esta ruta sea la correcta en tus carpetas
-    color: "from-[#048450] to-[#a3c74a]", // Verde esmeralda al verde/amarillo de la marca
+    href: "/compania/gobierno-corporativo", // Corregido: gobierno-corporativo
+    color: "from-[#dc2626] to-[#ef4444]", // Red-600 to red-500
   },
 ]
 
@@ -73,10 +73,10 @@ function InteractiveCard({ link, index, isInView }: any) {
     >
       <Link href={link.href} className="group relative block h-full">
         {/* El cuerpo de la tarjeta blanca con sombra suave */}
-        <div className="relative h-full bg-white border border-gray-100 rounded-[2.5rem] p-10 overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-500 group-hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.1)] group-hover:border-[#006437]/20">
+        <div className="relative h-full bg-white border border-gray-100 rounded-[2.5rem] p-10 overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all duration-500 group-hover:shadow-[0_20px_60px_-10px_rgba(0,0,0,0.1)] group-hover:border-red-800/20">
           
           {/* El círculo gigante que está escondido en la esquina y crece al hacer hover */}
-          <div className="absolute -right-10 -top-10 w-40 h-40 bg-gray-50 rounded-full transition-all duration-700 group-hover:scale-[3] group-hover:bg-[#f1f8e9] z-0" />
+          <div className="absolute -right-10 -top-10 w-40 h-40 bg-gray-50 rounded-full transition-all duration-700 group-hover:scale-[3] group-hover:bg-red-50 z-0" />
 
           <div className="relative z-10">
             {/* El cuadrito que contiene el ícono. Flota constantemente arriba y abajo */}
@@ -88,7 +88,7 @@ function InteractiveCard({ link, index, isInView }: any) {
               <link.icon className="w-10 h-10 text-white" />
             </motion.div>
 
-            <h3 className="text-2xl font-black text-[#004a29] mb-4 group-hover:text-[#006437] transition-colors tracking-tight">
+            <h3 className="text-2xl font-black text-red-950 mb-4 group-hover:text-red-800 transition-colors tracking-tight">
               {link.title}
             </h3>
             
@@ -98,7 +98,7 @@ function InteractiveCard({ link, index, isInView }: any) {
 
             {/* El botón de "Explorar" con su flechita */}
             <div className="flex items-center gap-2">
-              <span className="text-sm font-black text-[#004a29] uppercase tracking-widest group-hover:text-[#a3c74a] transition-colors">
+              <span className="text-sm font-black text-red-950 uppercase tracking-widest group-hover:text-red-600 transition-colors">
                 Explorar
               </span>
               <div className="relative flex items-center">
@@ -107,17 +107,17 @@ function InteractiveCard({ link, index, isInView }: any) {
                   animate={{ x: [0, 5, 0] }}
                   transition={{ repeat: Infinity, duration: 1.5 }}
                 >
-                  <ArrowRight className="w-5 h-5 text-[#006437] group-hover:text-[#a3c74a] transition-colors" />
+                  <ArrowRight className="w-5 h-5 text-red-800 group-hover:text-red-600 transition-colors" />
                 </motion.div>
                 {/* La línea amarilla que se dibuja por debajo al pasar el mouse */}
-                <div className="absolute -bottom-1 left-0 h-[2px] bg-[#a3c74a] w-0 group-hover:w-full transition-all duration-500" />
+                <div className="absolute -bottom-1 left-0 h-[2px] bg-red-600 w-0 group-hover:w-full transition-all duration-500" />
               </div>
             </div>
           </div>
 
           {/* Unas estrellitas decorativas abstractas en la esquina inferior derecha */}
           <div className="absolute bottom-4 right-4 opacity-5 group-hover:opacity-20 transition-opacity">
-            <Sparkles size={60} className="text-[#004a29]" />
+            <Sparkles size={60} className="text-red-950" />
           </div>
         </div>
       </Link>
@@ -144,23 +144,22 @@ export function QuickLinksSection() {
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           className="max-w-3xl mb-20"
         >
-          <span className="inline-block px-4 py-1 bg-[#006437]/10 text-[#006437] text-[10px] font-black uppercase tracking-[0.3em] rounded-full mb-6">
+          <span className="inline-block px-4 py-1 bg-red-800/10 text-red-800 text-[10px] font-black uppercase tracking-[0.3em] rounded-full mb-6">
             Nuestra Compañía
           </span>
           
-          <h2 className="text-4xl md:text-6xl font-black text-[#004a29] mb-6 tracking-tighter">
+          <h2 className="text-4xl md:text-6xl font-black text-red-950 mb-6 tracking-tighter">
             Descubre el corazón de <br />
             {/* ¡AQUÍ ESTÁ LA MAGIA DEL TEXTO!
-               Cambiamos el degradado. Empieza en verde oscuro (#006437) y termina en el verde claro (#a3c74a).
-               Así nunca se va a perder contra el fondo blanco.
+               Cambiamos el degradado. Empieza en rojo oscuro y termina en un rojo más vivo.
             */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#006437] to-[#a3c74a]">
-              Castilla Agrícola
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-800 to-red-500">
+              Riopaila Agrícola
             </span>
           </h2>
           
           {/* Pequeño separador amarillo debajo del título */}
-          <div className="w-20 h-1.5 bg-[#a3c74a] rounded-full mb-8" />
+          <div className="w-20 h-1.5 bg-red-600 rounded-full mb-8" />
           
           <p className="text-xl text-gray-500 font-medium">
             Siete décadas de compromiso con la tierra y su gente.

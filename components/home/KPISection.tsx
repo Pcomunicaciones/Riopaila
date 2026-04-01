@@ -38,12 +38,12 @@ export function KPISection() {
       >
         <img 
           src="/Imagenes/DSC_0279.jpg" 
-          alt="Cifras Castilla Agrícola"
+          alt="Cifras Riopaila Agrícola"
           loading="lazy"
           className="w-full h-full object-cover scale-110"
         />
         {/* Capas oscuras para que el texto resalte siempre, sin importar qué tan clara sea la foto */}
-        <div className="absolute inset-0 bg-[#002b18]/85 mix-blend-multiply pointer-events-none" />
+        <div className="absolute inset-0 bg-[#2b0000]/85 mix-blend-multiply pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black pointer-events-none" />
       </motion.div>
 
@@ -63,15 +63,15 @@ export function KPISection() {
               initial={{ x: -20, opacity: 0 }}
               animate={isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full text-[#a3c74a] text-xs font-black uppercase tracking-[0.4em] mb-8 will-change-[transform,opacity]"
+              className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full text-red-500 text-xs font-black uppercase tracking-[0.4em] mb-8 will-change-[transform,opacity]"
             >
-              <div className="w-2 h-2 bg-[#a3c74a] rounded-full animate-pulse shadow-[0_0_8px_#a3c74a]" />
+              <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse shadow-[0_0_8px_#dc2626]" />
               Impacto Real
             </motion.div>
             {/* ====================================================================== */}
             
             <h2 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
-              Cifras que <br /> <span className="text-[#a3c74a]">trascienden.</span>
+              Cifras que <br /> <span className="text-red-500">trascienden.</span>
             </h2>
           </div>
           
@@ -81,7 +81,7 @@ export function KPISection() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="md:max-w-xs will-change-[transform,opacity]"
           >
-            <p className="text-white/70 text-xl font-normal border-l-4 border-[#a3c74a] pl-6 leading-relaxed">
+            <p className="text-white/70 text-xl font-normal border-l-4 border-red-600 pl-6 leading-relaxed">
               Nuestra operación se mide en resultados, pero se vive en el bienestar de nuestra gente.
             </p>
           </motion.div>
