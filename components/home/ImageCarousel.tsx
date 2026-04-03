@@ -9,12 +9,6 @@ import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
 // --- GALERÍA DE IMÁGENES ---
 const carouselItems = [
   {
-    id: 1,
-    title: "Campos de Caña",
-    description: "Extensas hectáreas cultivadas con las mejores prácticas agrícolas.",
-    image: "/Imagenes/IMG_5870.JPG",
-  },
-  {
     id: 2,
     title: "Comunidades",
     description: "Desarrollo social y bienestar constante para nuestra gente.",
@@ -86,9 +80,9 @@ export function ImageCarousel() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-red-800/10 border border-red-800/20 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-red-600/10 border border-red-600/20 rounded-full mb-4">
             <Sparkles size={14} className="text-red-600" />
-            <span className="text-[10px] font-bold tracking-[0.2em] text-red-800 uppercase">En Terreno</span>
+            <span className="text-[10px] font-bold tracking-[0.2em] text-red-600 uppercase">En Terreno</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-[#1a2b3c] tracking-tight">
             Nuestra Operación
@@ -143,15 +137,15 @@ export function ImageCarousel() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.8 }}
                 >
-                  <span className="block text-red-500 text-[11px] md:text-xs font-bold uppercase tracking-[0.3em] mb-4">
+                  <span className="block text-red-600 text-[11px] md:text-xs font-bold uppercase tracking-[0.3em] mb-4">
                     Riopaila Agrícola
                   </span>
 
-                  <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight tracking-tight drop-shadow-sm">
+                  <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white/95 leading-tight tracking-tight drop-shadow-sm">
                     {currentItem.title}
                   </h3>
 
-                  <p className="text-lg md:text-xl text-gray-300 font-light border-l-[3px] border-red-600 pl-5 leading-relaxed">
+                  <p className="text-lg md:text-xl text-gray-400 font-light border-l-[3px] border-red-600 pl-5 leading-relaxed">
                     {currentItem.description}
                   </p>
                 </motion.div>

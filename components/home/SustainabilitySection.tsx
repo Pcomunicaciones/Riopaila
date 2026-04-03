@@ -7,9 +7,9 @@ import { Leaf, Droplets, Sun, Users, ArrowUpRight, Sparkles } from "lucide-react
 // --- DATOS DE LAS INICIATIVAS (DATA) ---
 // Aquí definimos las tarjetas. Cada una tiene su ícono, título, descripción y color de acento.
 const items = [
-  { icon: Leaf, title: "Agricultura Responsable", desc: "Prácticas que regeneran el ecosistema mediante nutrición orgánica.", col: "#dc2626" }, // Red-600
-  { icon: Droplets, title: "Gestión del Agua", desc: "Riego por goteo y monitoreo en tiempo real para preservar acuíferos.", col: "#991b1b" }, // Red-800
-  { icon: Sun, title: "Energía Limpia", desc: "Paneles solares y biomasa para reducir nuestra huella de carbono.", col: "#ea580c" }, // Orange-600 (kept as contrast but can be red-soft)
+  { icon: Leaf, title: "Agricultura Responsable", desc: "Prácticas que regeneran el ecosistema mediante nutrición orgánica.", col: "#dc2626" }, // Red-600 (Corporate)
+  { icon: Droplets, title: "Gestión del Agua", desc: "Riego por goteo y monitoreo en tiempo real para preservar acuíferos.", col: "#c2410c" }, // Swapped for a less wine-like red-orange or similar? Wait, user wants reds.
+  { icon: Sun, title: "Energía Limpia", desc: "Paneles solares y biomasa para reducir nuestra huella de carbono.", col: "#be123c" }, // Rose-700 (Vibrant red)
   { icon: Users, title: "Impacto Social", desc: "Fortalecemos el tejido social mediante educación y empleo digno.", col: "#b91c1c" }, // Red-700
 ]
 
@@ -105,14 +105,14 @@ export function SustainabilitySection() {
             initial={{ rotate: -10, opacity: 0 }}
             animate={isInView ? { rotate: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex items-center gap-2 px-5 py-1.5 border border-red-800/40 bg-red-800/10 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.4em] mb-8 will-change-transform"
+            className="flex items-center gap-3 px-8 py-2.5 border-2 border-red-600/40 bg-red-600/10 text-white/95 rounded-full text-xs font-black uppercase tracking-[0.6em] mb-12 will-change-transform shadow-[0_0_30px_rgba(220,38,38,0.2)]"
           >
-            <Sparkles size={14} className="animate-pulse text-red-600" /> SOSTENIBILIDAD
+            <Sparkles size={18} className="animate-pulse text-red-600" /> SOSTENIBILIDAD
           </motion.div>
           {/* ====================================================================== */}
 
           {/* El título principal. Animamos letra por letra para un efecto súper premium y secuencial */}
-          <h2 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter">
+          <h2 className="text-5xl md:text-7xl font-black text-white/90 leading-none tracking-tighter">
             {"Comprometidos con el ".split("").map((char, i) => (
               <motion.span
                 key={i}
@@ -172,7 +172,7 @@ export function SustainabilitySection() {
                   {item.title}
                 </h3>
                 
-                <p className="text-sm text-gray-100 leading-relaxed font-normal group-hover:text-white transition-colors">
+                <p className="text-sm text-zinc-400 leading-relaxed font-normal group-hover:text-white transition-colors">
                   {item.desc}
                 </p>
               </div>

@@ -4,34 +4,45 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const HERO_SLIDES = [
   {
     id: 1,
-    tag: "Innovación y Sostenibilidad",
-    title: "Cuidamos la tierra y nuestras comunidades",
-    description: "En Riopaila Agrícola, implementamos sistemas de riego avanzados y prácticas sostenibles para maximizar la eficiencia y minimizar nuestro impacto ambiental.",
-    image: "/Imagenes/DSC_0279.jpg", // Recuerda actualizar esta imagen
-    theme: "#000000", // Tema neutro/oscuro
+    tag: "Nuestra Esencia",
+    title: "Campos de Caña",
+    description: "Extensas hectáreas cultivadas con las mejores prácticas agrícolas, base de nuestra excelencia y compromiso.",
+    image: "/Imagenes/IMG_5870.JPG",
+    theme: "#000000",
     primaryBtn: { text: "Conócenos", href: "/compania/quienes-somos" },
-    secondaryBtn: { text: "Nuestros Productos", href: "/Operacion/otras-lineas" }
+    secondaryBtn: { text: "Nuestra Diferencia", href: "/compania/quienes-somos" }
   },
   {
     id: 2,
+    tag: "Innovación y Sostenibilidad",
+    title: "Cuidamos la tierra y nuestras comunidades",
+    description: "En Riopaila Agrícola, implementamos sistemas de riego avanzados y prácticas sostenibles para maximizar la eficiencia y minimizar nuestro impacto ambiental.",
+    image: "/Imagenes/DSC_0279.jpg",
+    theme: "#000000",
+    primaryBtn: { text: "Operación", href: "/Operacion/el-campo" },
+    secondaryBtn: { text: "Sostenibilidad", href: "/sostenibilidad/gestion-ambiental" }
+  },
+  {
+    id: 3,
     tag: "Comunidad",
     title: "Nuestro compromiso va más allá de la agricultura",
     description: "Nos esforzamos por mejorar el bienestar de nuestros colaboradores y contribuir positivamente al desarrollo de las regiones donde operamos.",
-    image: "/Imagenes/IMG_5924.jpg", // Recuerda actualizar esta imagen
+    image: "/Imagenes/IMG_5924.jpg",
     theme: "#000000",
     primaryBtn: { text: "Gestión Social", href: "/sostenibilidad/gestion-social" },
     secondaryBtn: { text: "Trabaje con Nosotros", href: "/grupos-de-interes/talento" }
   },
   {
-    id: 3,
+    id: 4,
     tag: "Recurso Hídrico",
     title: "Creamos valor compartido sostenible",
     description: "Alineados con los ODS de la ONU, optimizamos el agua y minimizamos el impacto ambiental generando rentabilidad y confianza en nuestro entorno.",
-    image: "/Imagenes/IMG_6253.jpg", // Recuerda actualizar esta imagen
+    image: "/Imagenes/IMG_6253.jpg",
     theme: "#000000",
     primaryBtn: { text: "Gestión Ambiental", href: "/sostenibilidad/gestion-ambiental" },
     secondaryBtn: { text: "Ver Informes", href: "/sostenibilidad/informes" }
@@ -65,10 +76,12 @@ export function HeroSection() {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="absolute inset-0"
         >
-          <img
+          <Image
             src={HERO_SLIDES[current].image}
             alt="Fondo Riopaila Agrícola"
-            className="w-full h-full object-cover opacity-70"
+            fill
+            priority={current === 0}
+            className="object-cover opacity-60"
           />
           {/* Capas oscuras para mejorar lectura en diseño negro/elegante */}
           <div className="absolute inset-0 bg-black/40" />
@@ -101,12 +114,12 @@ export function HeroSection() {
               </motion.div>
 
               {/* Título Principal */}
-              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white leading-[1.1] md:leading-[1] mb-6 drop-shadow-2xl">
+              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white/95 leading-[1.1] md:leading-[1] mb-6 drop-shadow-2xl">
                 {HERO_SLIDES[current].title}
               </h1>
 
               {/* Descripción */}
-              <p className="text-base md:text-xl text-white/90 mb-8 md:mb-10 leading-relaxed max-w-xl font-light">
+              <p className="text-base md:text-xl text-white/80 mb-8 md:mb-10 leading-relaxed max-w-xl font-light">
                 {HERO_SLIDES[current].description}
               </p>
 

@@ -66,7 +66,7 @@ export function KPICard({ value, suffix = "", label, description, delay = 0 }: K
             <span className="text-red-500 text-4xl group-hover:scale-125 transition-transform duration-500">{suffix}</span>
           </div>
           
-          <h3 className="text-xl font-black text-white uppercase tracking-[0.2em] mb-3">
+          <h3 className="text-xl font-black text-white/90 uppercase tracking-[0.2em] mb-3">
             {label}
           </h3>
           
