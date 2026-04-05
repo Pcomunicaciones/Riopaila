@@ -105,9 +105,9 @@ export function SustainabilitySection() {
             initial={{ rotate: -10, opacity: 0 }}
             animate={isInView ? { rotate: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex items-center gap-3 px-8 py-2.5 border-2 border-red-600/40 bg-red-600/10 text-white/95 rounded-full text-xs font-black uppercase tracking-[0.6em] mb-12 will-change-transform shadow-[0_0_30px_rgba(220,38,38,0.2)]"
+            className="flex items-center gap-2 md:gap-3 px-6 md:px-8 py-2 md:py-2.5 border-2 border-red-600/40 bg-red-600/10 text-white/95 rounded-full text-[10px] md:text-xs font-black uppercase tracking-[0.4em] md:tracking-[0.6em] mb-8 md:mb-12 will-change-transform shadow-[0_0_30px_rgba(220,38,38,0.2)]"
           >
-            <Sparkles size={18} className="animate-pulse text-red-600" /> SOSTENIBILIDAD
+            <Sparkles size={16} className="animate-pulse text-red-600 md:w-[18px] md:h-[18px]" /> SOSTENIBILIDAD
           </motion.div>
           {/* ====================================================================== */}
 

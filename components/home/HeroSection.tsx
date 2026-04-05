@@ -114,17 +114,17 @@ export function HeroSection() {
               </motion.div>
 
               {/* Título Principal */}
-              <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white/95 leading-[1.1] md:leading-[1] mb-6 drop-shadow-2xl">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white/95 leading-[1.1] md:leading-[1] mb-6 drop-shadow-2xl">
                 {HERO_SLIDES[current].title}
               </h1>
 
               {/* Descripción */}
-              <p className="text-base md:text-xl text-white/80 mb-8 md:mb-10 leading-relaxed max-w-xl font-light">
+              <p className="text-sm sm:text-base md:text-xl text-white/80 mb-8 md:mb-10 leading-relaxed max-w-xl font-light">
                 {HERO_SLIDES[current].description}
               </p>
 
               {/* Botones de Acción (CTA) */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
                   <Link
                     href={HERO_SLIDES[current].primaryBtn.href}

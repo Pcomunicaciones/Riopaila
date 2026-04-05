@@ -95,16 +95,15 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           
           {/* LOGO */}
-          <Link href="/" className="flex items-center space-x-3 group">
+          <Link href="/" className="flex items-center space-x-2 md:space-x-3 group">
             <img 
               src="/Imagenes/LOGO-RIO-POS.png" 
               alt="Logo" 
-              className="h-10 w-auto object-contain transition-all duration-300" 
+              className="h-8 md:h-10 w-auto object-contain transition-all duration-300" 
             />
-            <div className="hidden sm:block transition-colors text-white">
-              {/* Ajusta este texto al de la nueva empresa si es necesario */}
-              <p className="font-bold text-lg leading-tight tracking-tight">Riopaila Agricola</p> 
-              <p className="text-[10px] font-black opacity-80 uppercase tracking-widest">S.A.</p>
+            <div className="hidden xs:block transition-colors text-white">
+              <p className="font-bold text-base md:text-lg leading-tight tracking-tight">Riopaila Agricola</p> 
+              <p className="text-[8px] md:text-[10px] font-black opacity-80 uppercase tracking-widest">S.A.</p>
             </div>
           </Link>
 

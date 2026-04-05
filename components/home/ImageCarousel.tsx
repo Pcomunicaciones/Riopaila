@@ -141,11 +141,11 @@ export function ImageCarousel() {
                     Riopaila Agrícola
                   </span>
 
-                  <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white/95 leading-tight tracking-tight drop-shadow-sm">
+                  <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 text-white/95 leading-tight tracking-tight drop-shadow-sm">
                     {currentItem.title}
                   </h3>
 
-                  <p className="text-lg md:text-xl text-gray-400 font-light border-l-[3px] border-red-600 pl-5 leading-relaxed">
+                  <p className="text-base md:text-xl text-gray-400 font-light border-l-[3px] border-red-600 pl-5 leading-relaxed">
                     {currentItem.description}
                   </p>
                 </motion.div>

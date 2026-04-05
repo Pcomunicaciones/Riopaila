@@ -133,19 +133,19 @@ const MENU_STRUCTURE = [
 /* --- SECCIÓN ACTUALIZADA: COMPONENTES DE DISEÑO --- */
 
 const DataCard = ({ title, children }: { title: string, children: React.ReactNode }) => (
-  <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden mb-8" style={{ fontFamily: 'Tahoma, sans-serif' }}>
+  <div className="bg-white rounded-2xl md:rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden mb-8" style={{ fontFamily: 'Tahoma, sans-serif' }}>
     {/* Fondo de cabecera cambiado a rojo muy claro */}
-    <div className="bg-red-50/50 px-8 py-5 border-b border-gray-100">
+    <div className="bg-red-50/50 px-5 md:px-8 py-4 md:py-5 border-b border-gray-100">
       <h3 className="text-red-800 font-bold text-sm uppercase tracking-widest">{title}</h3>
     </div>
-    <div className="p-8">{children}</div>
+    <div className="p-5 md:p-8">{children}</div>
   </div>
 )
 
 // --- COMPONENTE: DocumentCell ACTUALIZADO (Solo vista previa) ---
 
 const DocumentCell = ({ title, fileName }: { title: string, fileName: string }) => (
-  <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 p-3 mt-2 border border-gray-100 bg-white rounded-xl hover:border-red-400 transition-all group shadow-sm">
+  <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 p-2.5 md:p-3 mt-2 border border-gray-100 bg-white rounded-xl hover:border-red-400 transition-all group shadow-sm">
     <div className="flex items-center gap-3">
       <div className="w-8 h-8 bg-slate-50 rounded-lg flex items-center justify-center text-red-800 group-hover:bg-red-800 group-hover:text-white transition-colors shrink-0">
         <FileText size={16} />
@@ -186,7 +186,7 @@ const EstructuraView = () => (
           { cargo: "SUPLENTE", nombre: "JUAN CARLOS BEDOYA GARCIA", id: "C.C. 16.757.005" },
           { cargo: "SUPLENTE", nombre: "MARIA LEANI CARREÑO ALVARAN", id: "C.C. 67.007.484" }
         ].map((rep, i) => (
-          <div key={i} className="flex flex-col md:flex-row md:items-center justify-between p-4 border-b border-gray-50 last:border-0 hover:bg-red-50/50 rounded-xl transition-colors">
+          <div key={i} className="flex flex-col md:flex-row md:items-center justify-between p-3 md:p-4 border-b border-gray-50 last:border-0 hover:bg-red-50/50 rounded-xl transition-colors">
             <div>
               <p className="text-[10px] font-bold text-red-600 uppercase tracking-widest">{rep.cargo}</p>
               <p className="font-bold text-red-800 text-base">{rep.nombre}</p>
@@ -228,10 +228,10 @@ const EstructuraView = () => (
     </DataCard>
 
     <DataCard title="Principales Accionistas">
-      <div className="overflow-x-auto">
-        <table className="w-full text-left text-sm">
+      <div className="overflow-x-auto -mx-2 sm:mx-0">
+        <table className="w-full text-left text-sm min-w-[500px]">
           <thead>
-            <tr className="text-gray-400 font-bold uppercase text-[10px] tracking-[0.2em] border-b border-gray-100">
+            <tr className="text-gray-400 font-bold uppercase text-[9px] md:text-[10px] tracking-[0.2em] border-b border-gray-100">
               <th className="pb-4 px-2">Accionista</th>
               <th className="pb-4 text-right">Acciones Ordinarias</th>
               <th className="pb-4 text-right">%</th>
@@ -379,7 +379,7 @@ const ConglomeradosView = () => (
           { fecha: "27 de Septiembre de 2016", desc: "Se configura situación de control con la empresa Belmonte Agrícola S.A.S., inscrita ante la cámara de comercio de Cali el 9 de septiembre de 2016 bajo el No. 14665 del libro IX." },
           { fecha: "28 de Diciembre de 2012", desc: "Se configura situación de control con la empresa Bengala Agrícola S.A.S., inscrita ante cámara de comercio de Cali el 5 de marzo de 2013 bajo el No. 2473 de Libro IX." }
         ].map((item, i) => (
-          <div key={i} className="flex gap-4 border-l-4 border-red-600 pl-6 py-2">
+          <div key={i} className="flex gap-4 border-l-4 border-red-600 pl-4 md:pl-6 py-2">
             <div>
               <p className="text-[10px] font-black text-red-600 uppercase tracking-widest">{item.fecha}</p>
               <p className="text-sm text-red-800 leading-relaxed mt-1 font-bold">{item.desc}</p>
@@ -395,7 +395,7 @@ const ConglomeradosView = () => (
           { fecha: "03 de Julio del 2012", desc: "La compañía configuró Grupo Empresarial con las sociedades: Agro Avelina S.A.S.; Agro El Venado S.A.S; Agro La Pampa S.A.S.; Agro La Balsa S.A.S.; Cauca Grande S.A. Inscripción 19 de julio 2012 bajo el número 8772 del libro IX." },
           { fecha: "28 de Diciembre de 2012", desc: "Se configura Grupo Empresarial con la empresa Bengala Agrícola S.A.S., inscrita ante cámara de comercio de Cali el 5 de marzo de 2013 bajo el No. 2472 de Libro IX." }
         ].map((item, i) => (
-          <div key={i} className="flex gap-4 border-l-4 border-red-800 pl-6 py-2">
+          <div key={i} className="flex gap-4 border-l-4 border-red-800 pl-4 md:pl-6 py-2">
             <div>
               <p className="text-[10px] font-black text-red-800 uppercase tracking-widest">{item.fecha}</p>
               <p className="text-sm text-gray-600 leading-relaxed mt-1">{item.desc}</p>
@@ -1084,7 +1084,7 @@ const AtencionInversionistaView = () => {
           </div>
         </div>
 
-        <div className="bg-red-50/50 p-6 rounded-2xl border border-red-50">
+        <div className="bg-red-50/50 p-4 md:p-6 rounded-2xl border border-red-50">
           <h5 className="text-[11px] font-black text-red-800 uppercase tracking-widest mb-4">La solicitud deberá contener como mínimo:</h5>
           <ul className="space-y-3">
             {[
@@ -1147,18 +1147,18 @@ export default function InversionistasPage() {
   const [activeSubItem, setActiveSubItem] = useState<string>('estructura')
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   return (
-    <div className="flex bg-[#fcfdfc] min-h-screen" style={{ fontFamily: 'Tahoma, sans-serif' }}>
+    <div className="flex bg-[#fcfdfc] min-h-screen overflow-x-hidden" style={{ fontFamily: 'Tahoma, sans-serif' }}>
       {/* SIDEBAR INVERSIONISTAS */}
-      <aside className={`fixed lg:sticky top-0 lg:top-28 left-0 h-[calc(100vh-8rem)] w-[360px] bg-white border border-gray-100 flex flex-col transition-transform z-40 rounded-r-[2.5rem] shadow-2xl lg:shadow-sm self-start ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
+      <aside className={`fixed lg:sticky top-0 lg:top-28 left-0 h-screen lg:h-[calc(100vh-8rem)] w-[280px] xs:w-[320px] sm:w-[360px] bg-white border-r border-gray-100 flex flex-col transition-transform duration-300 z-50 lg:z-40 shadow-2xl lg:shadow-none self-start ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
 
 
 
         {/* ENCABEZADO FIJO */}
 
         {/* ENCABEZADO FIJO */}
-        <div className="p-12 pb-8 border-b border-gray-50 shrink-0">
-          <span className="text-[10px] font-bold text-red-600 tracking-[0.3em] uppercase block mb-3">Castilla Agrícola</span>
-          <h2 className="text-3xl font-bold text-red-800 not-italic uppercase tracking-tight leading-none">Inversionistas</h2>
+        <div className="p-8 md:p-12 pb-6 md:pb-8 border-b border-gray-50 shrink-0">
+          <span className="text-[10px] font-bold text-red-600 tracking-[0.3em] uppercase block mb-2 md:mb-3">Castilla Agrícola</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-red-800 not-italic uppercase tracking-tight leading-none">Inversionistas</h2>
         </div>
 
 
@@ -1200,7 +1200,7 @@ export default function InversionistasPage() {
 
                   <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
 
-                    <div className="py-4 px-8 space-y-2">
+                    <div className="py-4 px-4 sm:px-8 space-y-2">
 
                       {menu.subItems.map((sub) => (
 
@@ -1233,7 +1233,7 @@ export default function InversionistasPage() {
 
       {/* ÁREA DE CONTENIDO */}
 
-      <main className="flex-1 px-8 lg:px-20 pt-32 lg:pt-40 pb-20 overflow-x-hidden">
+      <main className="flex-1 px-4 sm:px-8 lg:px-20 pt-24 md:pt-32 lg:pt-40 pb-20 overflow-x-hidden">
 
         {/* 👇 AQUÍ ESTÁ EL CAMBIO: Quité h-[280px] y puse min-h-[160px] con py-10. También ajusté el borde a rounded-3xl 👇 */}
 
@@ -1241,9 +1241,9 @@ export default function InversionistasPage() {
 
 
         {/* 👇 BANNER PRINCIPAL ACTUALIZADO A ROJO 👇 */}
-        <div className="relative w-full min-h-[160px] py-10 bg-red-800 rounded-3xl overflow-hidden mb-10 flex items-center px-10 shadow-xl shadow-red-900/10">
-          <div className="relative z-10">
-            <h1 className="text-4xl lg:text-5xl font-bold text-white uppercase not-italic tracking-tight leading-none">
+        <div className="relative w-full min-h-[120px] md:min-h-[160px] py-8 md:py-10 bg-red-800 rounded-2xl md:rounded-3xl overflow-hidden mb-8 md:mb-10 flex items-center px-6 md:px-10 shadow-xl shadow-red-900/10">
+          <div className="relative z-10 w-full">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase not-italic tracking-tight leading-tight md:leading-none">
               {MENU_STRUCTURE.find(m => m.id === openMenuId)?.label || "INVERSIONISTAS"}
             </h1>
 
@@ -1307,10 +1307,11 @@ export default function InversionistasPage() {
 
 
 
-      <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="lg:hidden fixed bottom-8 right-8 z-50 bg-[#006437] text-white p-5 rounded-full shadow-2xl border-2 border-[#a3c74a]">
-
+      <button 
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
+        className="lg:hidden fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-red-600 text-white p-4 md:p-5 rounded-full shadow-2xl border-2 border-red-400 active:scale-90 transition-transform"
+      >
         {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
-
       </button>
 
 

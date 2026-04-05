@@ -47,7 +47,7 @@ export function KPICard({ value, suffix = "", label, description, delay = 0 }: K
       animate={isInView ? { opacity: 1, y: 0, rotateY: 0 } : {}}
       transition={{ duration: 1, delay: delay * 0.2, ease: "easeOut" }}
       whileHover={{ y: -15, scale: 1.02 }}
-      className="relative group perspective-1000 bg-white/5 backdrop-blur-xl rounded-[2.5rem] p-10 border border-white/10 shadow-2xl overflow-hidden"
+      className="relative group perspective-1000 bg-white/5 backdrop-blur-xl rounded-[2.5rem] p-6 sm:p-10 border border-white/10 shadow-2xl overflow-hidden"
     >
       {/* Luz que sigue al mouse dentro de la tarjeta */}
       <motion.div 
@@ -60,8 +60,8 @@ export function KPICard({ value, suffix = "", label, description, delay = 0 }: K
         }}
       />
   
-        <div className="relative z-10">
-          <div className="text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter flex items-baseline gap-1">
+        <div className="relative z-10 w-full">
+          <div className="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-4 tracking-tighter flex items-baseline gap-1">
             <motion.span>{displayValue}</motion.span>
             <span className="text-red-500 text-4xl group-hover:scale-125 transition-transform duration-500">{suffix}</span>
           </div>

@@ -163,7 +163,7 @@ export function QuickLinksSection() {
         </motion.div>
 
         {/* --- EL GRID DE LAS TARJETAS --- */}
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {/* Recorremos nuestra lista de links y dibujamos una tarjeta por cada uno */}
           {quickLinks.map((link, index) => (
             <InteractiveCard 
