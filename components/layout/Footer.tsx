@@ -50,7 +50,7 @@ export function Footer() {
               {/* 2. TEXTO ESTÁTICO */}
               <div className="flex flex-col justify-center select-none">
                 <span className="text-2xl font-bold leading-none tracking-tight text-white cursor-default">
-                  Riopaila
+                  Riopaila Agrícola
                 </span>
                 <span className="text-2xl font-bold leading-none tracking-tight text-white cursor-default">
                   S.A.
@@ -98,7 +98,8 @@ export function Footer() {
               <div className="text-xs text-white/80 space-y-2.5">
                 {/* 👇 Iconos en gris claro 👇 */}
                 <p className="flex items-center gap-2.5"><Phone size={13} className="text-stone-300" /> (57)(602)4855974</p>
-                <p className="flex items-center gap-2.5 truncate"><Mail size={13} className="text-stone-300" /> Administracion.Corp@Agroriocas.Com</p>
+                <p className="flex items-center gap-2.5 truncate"><Mail size={13} className="text-stone-300" />
+                  administracion.corp@agroriocas.com</p>
               </div>
             </div>
           </div>
@@ -145,7 +146,7 @@ export function Footer() {
         {/* LÍNEA FINAL */}
         <div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 font-normal">
           <p className="text-[10px] text-stone-400 tracking-wide">
-            © {currentYear} <span className="text-white">Riopaila S.A.</span> - Todos los derechos reservados.
+            © {currentYear} <span className="text-white">Riopaila Agrícola S.A.</span> - Todos los derechos reservados.
           </p>
         </div>
       </div>

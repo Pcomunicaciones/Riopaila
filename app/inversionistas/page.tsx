@@ -34,7 +34,7 @@ const MENU_STRUCTURE = [
 
     icon: Building2,
 
-    description: "Estructura de mando, junta directiva y representantes legales.",
+    description: "Equipo Directivo, junta directiva y representantes legales.",
 
     subItems: [
 
@@ -183,8 +183,8 @@ const EstructuraView = () => (
       <div className="grid gap-2 mb-6">
         {[
           { cargo: "PRINCIPAL", nombre: "GUSTAVO ADOLFO BARONA TORRES", id: "C.C. 6.404.843" },
-          { cargo: "SUPLENTE", nombre: "JUAN CARLOS BEDOYA GARCIA", id: "C.C. 16.757.005" },
-          { cargo: "SUPLENTE", nombre: "MARIA LEANI CARREÑO ALVARAN", id: "C.C. 67.007.484" }
+          { cargo: "SUPLENTE", nombre: "JUAN CARLOS BEDOYA GARCÍA", id: "C.C. 16.757.005" },
+          { cargo: "SUPLENTE", nombre: "MARÍA LEANI CARREÑO ALVARÁN", id: "C.C. 67.007.484" }
         ].map((rep, i) => (
           <div key={i} className="flex flex-col md:flex-row md:items-center justify-between p-3 md:p-4 border-b border-gray-50 last:border-0 hover:bg-red-50/50 rounded-xl transition-colors">
             <div>
@@ -325,17 +325,17 @@ const EstructuraView = () => (
         <div className="space-y-6">
           <div>
             <p className="text-[10px] font-bold text-gray-400 mb-1 tracking-widest uppercase">Revisor Fiscal</p>
-            <p className="font-bold text-red-800 text-sm">PWC Contadores y Auditores S.A.S.</p>
-            <p className="text-xs text-gray-500 mb-3">NIT. 900.943.048-4</p>
+            <p className="font-bold text-red-800 text-sm">ERNST & YOUNG AUDIT S.A.S</p>
+            <p className="text-xs text-gray-500 mb-3">NIT. 860.008.890-5</p>
 
             <div className="space-y-2 border-l-2 border-gray-100 pl-3">
               <div>
-                <p className="text-xs font-bold text-gray-700">Principal: Jhon Alexander Pineda Mejía</p>
-                <p className="text-[11px] text-gray-500">C.C. 94.415.859 <span className="mx-1">|</span> T.P. 79093-T</p>
+                <p className="text-xs font-bold text-gray-700">Principal: PAOLA ANDREA VELASCO BETANCOURT</p>
+                <p className="text-[11px] text-gray-500">C.C. 1.107.088.378 <span className="mx-1">|</span> T.P. 327263-T</p>
               </div>
               <div>
-                <p className="text-xs font-bold text-gray-700">Suplente: Fabian Alexis Pardo Higuera</p>
-                <p className="text-[11px] text-gray-500">C.C. 1.018.432.341 <span className="mx-1">|</span> T.P. 258597-T</p>
+                <p className="text-xs font-bold text-gray-700">Suplente: YULIETH YESENIA PENAGOS RENDON</p>
+                <p className="text-[11px] text-gray-500">C.C. 1.143.831.377 <span className="mx-1">|</span> T.P. 233238-T</p>
               </div>
             </div>
           </div>
@@ -555,7 +555,7 @@ const InfoRelevanteView = () => {
       f: "15/08/2024",
       t: "Informe Periodico II Trimestre 2024",
       r: "En cumplimiento a la CE 012 de 2022 de la Superintendencia Financiera de Colombia, se da cumplimiento al Informe Periódico del segundo Trimestre del año 2024.",
-      doc: "INFORME-PERIODICO-II-TRIM.2024-CASTILLA-DEFINITIVO_compressed.pdf"
+      doc: "INFORME-PERIODICO-II-TRIM.2024-RIOPAILA-DEFINITIVO_compressed.pdf"
     },
     {
       f: "14/06/2024",
@@ -566,7 +566,7 @@ const InfoRelevanteView = () => {
     {
       f: "14/06/2024",
       t: "Decisiones adoptadas por la Asamblea de Inversionistas",
-      r: "Castilla Agrícola, informa al mercado de valores, la decisión aprobada en reunión extraordinaria de Asamblea General de Accionistas, celebrada de manera mixta el día de hoy 14 de junio de 2024.",
+      r: "Riopaila Agrícola, informa al mercado de valores, la decisión aprobada en reunión extraordinaria de Asamblea General de Accionistas, celebrada de manera mixta el día de hoy 14 de junio de 2024.",
       doc: "Alcance_Desiciones-AGA_Extraor_junio14-de-2024_CASTILLA-AGRICOLA.pdf"
     },
     {
@@ -579,12 +579,12 @@ const InfoRelevanteView = () => {
       f: "5/06/2024",
       t: "Otros Eventos",
       r: "Se adjunta comunicado que adopta medidas y mecanismos orientados a evitar prácticas ilegales, no autorizadas e inseguras en la representación de los Accionistas en reunión extraordinaria de Asamblea General el 14 de junio de 2024, en Cali, domicilio de la Sociedad.",
-      doc: "Alcance_Desiciones-AGA_Extraor_junio14-de-2024_CASTILLA-AGRICOLA_reconteo-1 .pdf"
+      doc: "Alcance_Desiciones-AGA_Extraor_junio14-de-2024_CASTILLA-AGRICOLA_reconteo-1.pdf"
     },
     {
       f: "4/06/2024",
       t: "Citación a Asamblea Extraordinaria",
-      r: "Convocatoria Asamblea General de Accionistas de Castilla Agrícola S.A en reunión extraordinaria, que se celebrará en forma Mixta (virtual y presencial), el 14 de junio de 2024 en Cali, domicilio de la Sociedad. Se someterá a consideración el proyecto de distribución de utilidades por liberación de reservas de utilidades de años anteriores.",
+      r: "Convocatoria Asamblea General de Accionistas de Riopaila Agrícola S.A en reunión extraordinaria, que se celebrará en forma Mixta (virtual y presencial), el 14 de junio de 2024 en Cali, domicilio de la Sociedad. Se someterá a consideración el proyecto de distribución de utilidades por liberación de reservas de utilidades de años anteriores.",
       doc: "CASTILLA-AGRICOLA-CITACION-14-JUN.-2024.pdf"
     },
     {
@@ -597,7 +597,7 @@ const InfoRelevanteView = () => {
       f: "15/05/2024",
       t: "Informe Periodico I Trimestre 2024",
       r: "En cumplimiento a la CE 012 de 2022 de la Superintendencia Financiera de Colombia, se da cumplimiento al Informe Periódico del primer Trimestre del año 2024.",
-      doc: "Informe-Castilla-2023.pdf"
+      doc: "Informe-Riopaila-2023-unido.pdf"
     },
     {
       f: "16/04/2024",
@@ -609,7 +609,7 @@ const InfoRelevanteView = () => {
       f: "21/03/2024",
       t: "Decisiones adoptadas por la Asamblea de Inversionistas",
       r: "Se adjunta convocatoria a la reunión ordinaria de la Asamblea de Accionistas de Riopaila Agrícola S.A., que se celebrará en forma Mixta (virtual y presencial), el día 21 de marzo de 2024, en Cali, domicilio de la Sociedad. Se incluye el Orden del Día.",
-      doc: "Alcance_Desiciones-Asamblea-General_mzo-21-de-2024_CASTILLA-AGRICOLA.pdf"
+      doc: "Alcance_Desiciones-Asamblea-General_mzo-21-de-2024_RIOPAILA-AGRICOLA.pdf"
     },
     {
       f: "21/03/2024",
@@ -627,7 +627,7 @@ const InfoRelevanteView = () => {
       f: "28/01/2024",
       t: "Convocatoria Asamblea de Inversionistas",
       r: "Se adjunta convocatoria a la reunión ordinaria de la Asamblea de Accionistas de Riopaila Agrícola S.A., que se celebrará en forma Mixta (virtual y presencial), el día 21 de marzo de 2024, en Cali, domicilio de la Sociedad. Se incluye el Orden del Día.",
-      doc: "Convocatoria-Asamblea_Castilla-Agricola.pdf"
+      doc: "Convocatoria-Asamblea_Riopaila-Agricola.pdf"
     },
     {
       f: "28/01/2024",
@@ -639,7 +639,7 @@ const InfoRelevanteView = () => {
       f: "28/01/2024",
       t: "Otros Eventos",
       r: "Se adjunta comunicado que adopta medidas y mecanismos orientados a evitar prácticas ilegales, no autorizadas e inseguras en la representación de los Accionistas en reunión de Asamblea General el 21 de marzo de 2024, en Cali, domicilio de la Sociedad.",
-      doc: "Desiciones-reunion-Ord-Asamblea-General-Accionistas_mzo-29-de-2023_CASTILLA-AGRICOLA (1).pdf"
+      doc: "Decisiones-_Asamblea-Ord-Accionistas-mzo-29_2023_RIOPAILA-AGRICOLA.pdf"
     },
     {
       f: "27/01/2024",
@@ -658,43 +658,43 @@ const InfoRelevanteView = () => {
       f: "14/11/2023",
       t: "Informes de fin de Ejercicio",
       r: "Se da cumplimiento al tercer Trimestre del año 2023, del Informe Periódico Trimestral de conformidad con la CE 012 de 2022 de la Superintendencia Financiera de Colombia.",
-      doc: "PDU-Dic-31_2022_CASTILLA-AGRICOLA.pdf"
+      doc: "PDU-Dic-31_2022_RIOPAILA-AGRICOLA.pdf"
     },
     {
       f: "14/08/2023",
       t: "Informes de fin de Ejercicio",
       r: "Se da cumplimiento al segundo Trimestre del año 2023, del Informe Periódico Trimestral de conformidad con la CE 012 de 2022 de la Superintendencia Financiera de Colombia.",
-      doc: "CASTILLA-INFORME-PERIODICO-II-TRIM.-AGO.14-2023.pdf"
+      doc: "RIOPAILA-INFORME-PERIODICO-II-TRIM.AGO_.14-2023.pdf"
     },
     {
       f: "15/05/2023",
       t: "Informes de fin de ejercicio",
       r: "Se da cumplimiento al primer Trimestre del año 2023, del Informe Periódico Trimestral de conformidad con la CE 012 de 2022 de la Superintendencia Financiera de Colombia.",
-      doc: "CASTILLA-INFORME-PERIODICO-PRIMER-TRIMESTRE-2023-1.pdf"
+      doc: "RIOPAILA-INFORME-PERIODICO-PRIMER-TRIMESTRE-2023.pdf"
     },
     {
       f: "28/04/2023",
       t: "Decisiones adoptadas por la Asamblea de Inversionistas",
       r: "Se da alcance a la información publicada el 29 de marzo de 2023, en atención a lo establecido en el numeral 5.5.del artículo 5.2.4.3.1.del Decreto 2555 de 2010.",
-      doc: "Alcance_Desiciones-Asamblea-General_mzo-29-de-2023_CASTILLA-AGRICOLA.pdf"
+      doc: "Alcance_Decisiones-_Asamblea-Accionistas-mzo-29_2023_RIOPAILA-AGRICOLA.pdf"
     },
     {
       f: "21/04/2023",
       t: "Informes de fin de ejercicio",
       r: "Se adjunta informe periódico de fin de ejercicio 2022, en cumplimiento a la CE 012 de 2022 emitida por la Superintendencia Financiera de Colombia, el cual fue presentado en Asamblea General de Accionistas el 29 de marzo de 2023.",
-      doc: "Decisiones-reunion-extraor-Asamblea-General-Accionistas_dic-22-de-2022_CASTILLA.pdf"
+      doc: "Decisiones-_Asamblea-Extraor-de-Accionistas-dic-22_2022_RIOPAILA.pdf"
     },
     {
       f: "29/03/2023",
       t: "Decisiones adoptadas por la Asamblea de Inversionistas",
       r: "Riopaila Agrícola, informa al mercado de valores, la decisión aprobada en reunión extraordinaria de Asamblea General de Accionistas, celebrada de manera mixta el día de hoy 29 de marzo de 2023.",
-      doc: "CASTILLA_Informe-fin-de-ejercicio-2022.pdf"
+      doc: "RIOPAILA_Informe-fin-de-ejercicio-2022.pdf"
     },
     {
       f: "29/03/2023",
       t: "Otros Eventos",
       r: "Se adjunta Proyecto de Distribución de Utilidades Acumuladas de noviembre a diciembre del año 2022, aprobado por la Asamblea General de Accionistas en reunión ordinaria, celebrada de manera mixta el día de hoy 29 de marzo de 2023.",
-      doc: "Desiciones-reunion-Ord-Asamblea-General-Accionistas_mzo-29-de-2023_CASTILLA-AGRICOLA .pdf"
+      doc: "Decisiones-_Asamblea-Ord-Accionistas-mzo-29_2023_RIOPAILA-AGRICOLA.pdf"
     },
     {
       f: "3/03/2023",
@@ -707,7 +707,7 @@ const InfoRelevanteView = () => {
       f: "3/03/2023",
       t: "Otros Eventos",
       r: "Se adjunta Proyecto de Distribución de Utilidades -PDU- del periodo acumulado noviembre y diciembre de 2022, que se presentará a consideración de la Asamblea General de Accionistas, en la reunión ordinaria que se celebrará el día 29 de marzo de 2023.",
-      doc: "CAST_PDU_Util-acum-nov-dic-2022_Asamblea-mzo-2023.pdf"
+      doc: "RIOP_PDU_Util-acum-nov-dic-2022_Asamblea-mzo-2023.pdf"
     },
     {
       f: "6/03/2023",
@@ -718,7 +718,7 @@ const InfoRelevanteView = () => {
     {
       f: "2/02/2023",
       t: "Códigos de Buen Gobierno",
-      r: "En cumplimiento a la circular externa 028 de 2014 de la SFC, se informa que Castilla Agrícola S.A. diligenció y trasmitió el día 31 de enero de 2023, la encuesta Código País correspondiente al año 2022.",
+      r: "En cumplimiento a la circular externa 028 de 2014 de la SFC, se informa que Riopaila Agrícola S.A. diligenció y trasmitió el día 31 de enero de 2023, la encuesta Código País correspondiente al año 2022.",
       doc: "RIOP_Encuesta-Codigo-Pais-2022.pdf"
     },
     {
@@ -1157,7 +1157,7 @@ export default function InversionistasPage() {
 
         {/* ENCABEZADO FIJO */}
         <div className="p-8 md:p-12 pb-6 md:pb-8 border-b border-gray-50 shrink-0">
-          <span className="text-[10px] font-bold text-red-600 tracking-[0.3em] uppercase block mb-2 md:mb-3">Castilla Agrícola</span>
+          <span className="text-[10px] font-bold text-red-600 tracking-[0.3em] uppercase block mb-2 md:mb-3">Riopaila Agrícola</span>
           <h2 className="text-2xl md:text-3xl font-bold text-red-800 not-italic uppercase tracking-tight leading-none">Inversionistas</h2>
         </div>
 

@@ -1,26 +1,33 @@
 "use client"
 
-import { FileDown, Calendar } from "lucide-react"
+import { ExternalLink, Calendar } from "lucide-react"
 import { motion, Variants } from "framer-motion"
 
 const informes = [
-  { 
-    year: "2023", 
-    title: "Informe de Gestión y Sostenibilidad", 
-    size: "25.5 MB", 
-    fileName: "Riopaila-Informe-de-Gestion-y-Sostenibilidad-2023-1.pdf" 
+  {
+    year: "2025",
+    title: "Informe de Gestión y Sostenibilidad",
+    fileName: "Riopaila-ENTREGDOCUMENTOFINAL21032026N-comprimido.pdf"
   },
-  { 
-    year: "2022", 
-    title: "Informe de Gestión", 
-    size: "119.9 MB", 
-    fileName: "Informe-de-gestion-RIOPAILA-2022.pdf" 
+  {
+    year: "2024",
+    title: "Informe de Gestión y Sostenibilidad",
+    fileName: "1-Riopaila-Informe-de-gestion-y-sostenibilidad-2024-DEFINITIVO.pdf"
   },
-  { 
-    year: "2021", 
-    title: "Informe de Gestión", 
-    size: "36.4 MB", 
-    fileName: "INFORME-DE-GESTION-RIOPAILA-2021-ASAMBLEA.pdf" 
+  {
+    year: "2023",
+    title: "Informe de Gestión y Sostenibilidad",
+    fileName: "Riopaila-Informe-de-Gestion-y-Sostenibilidad-2023-1.pdf"
+  },
+  {
+    year: "2022",
+    title: "Informe de Gestión",
+    fileName: "Informe-de-gestion-RIOPAILA-2022.pdf"
+  },
+  {
+    year: "2021",
+    title: "Informe de Gestión",
+    fileName: "INFORME-DE-GESTION-RIOPAILA-2021-ASAMBLEA.pdf"
   },
 ]
 
@@ -43,7 +50,7 @@ const itemVariants: Variants = {
 
 export default function InformesPage() {
   return (
-    <motion.div 
+    <motion.div
       // 👇 Aquí se fuerza el uso de Tahoma para todo este componente
       style={{ fontFamily: 'Tahoma, Geneva, sans-serif' }}
       className="space-y-10"
@@ -64,8 +71,8 @@ export default function InformesPage() {
       {/* Lista de Documentos */}
       <div className="space-y-4">
         {informes.map((doc, i) => (
-          <motion.div 
-            key={i} 
+          <motion.div
+            key={i}
             variants={itemVariants}
             whileHover={{ x: 8 }}
             className="flex flex-col md:flex-row md:items-center justify-between p-6 bg-white border border-gray-100 rounded-[2rem] hover:shadow-xl hover:shadow-red-900/5 transition-all group"
@@ -79,26 +86,27 @@ export default function InformesPage() {
                   {doc.title} <span className="text-red-500">{doc.year}</span>
                 </h4>
                 <p className="text-[11px] text-gray-400 font-black uppercase tracking-widest mt-0.5">
-                  PDF • {doc.size}
+
                 </p>
               </div>
             </div>
 
             {/* Botón de Descarga Real */}
-            <a 
-              href={`/docs/${doc.fileName}`} 
-              download={doc.fileName}
+            <a
+              href={`/docs/${doc.fileName}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-red-800 text-white px-8 py-3 rounded-2xl text-sm font-bold hover:bg-red-600 transition-all duration-300 shadow-lg shadow-red-900/10"
             >
-              <FileDown size={18} />
-              Descargar Reporte
+              <ExternalLink size={18} />
+              VER DOCUMENTO
             </a>
           </motion.div>
         ))}
       </div>
 
       {/* Nota de pie */}
-      <motion.div 
+      <motion.div
         variants={itemVariants}
         className="p-8 bg-[#f8f9fa] rounded-[2.5rem] border border-dashed border-gray-200 text-center"
       >
