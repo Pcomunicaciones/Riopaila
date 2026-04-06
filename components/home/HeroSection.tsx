@@ -12,7 +12,7 @@ const HERO_SLIDES = [
     tag: "Nuestra Esencia",
     title: "Campos de Caña",
     description: "Extensas hectáreas cultivadas con las mejores prácticas agrícolas, base de nuestra excelencia y compromiso.",
-    image: "/Imagenes/IMG_5870.JPG",
+    image: "/Imagenes/IMG_5870.png",
     theme: "#000000",
     primaryBtn: { text: "Conócenos", href: "/compania/quienes-somos" },
     secondaryBtn: { text: "Nuestra Diferencia", href: "/compania/quienes-somos" }
