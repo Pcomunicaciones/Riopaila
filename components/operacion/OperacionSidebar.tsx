@@ -7,7 +7,7 @@ import { Factory, Sprout, Briefcase, Building2, Layers, ChevronRight } from "luc
 
 const menuOperacion = [
   { name: "Cadena de Valor", href: "/Operacion/cadena-de-valor", icon: Factory, desc: "Eficiencia integrada" },
-  { name: "Desarrollo Cultivos", href: "/Operacion/desarrollo-cultivos", icon: Sprout, desc: "Innovación agrícola" },
+  //{ name: "Desarrollo Cultivos", href: "/Operacion/desarrollo-cultivos", icon: Sprout, desc: "Innovación agrícola" },
   { name: "Belagro", href: "/Operacion/belagro", icon: Briefcase, desc: "Insumos y servicios" },
   { name: "Proyectos Inmobiliarios", href: "/Operacion/proyectos-inmobiliarios", icon: Building2, desc: "Visión de territorio" },
   { name: "Otras Líneas", href: "/Operacion/otras-lineas", icon: Layers, desc: "Diversificación" },
@@ -17,7 +17,7 @@ export function OperacionSidebar() {
   const pathname = usePathname()
 
   return (
-    <div 
+    <div
       style={{ fontFamily: 'Tahoma, Geneva, sans-serif' }}
       // 👇 Fondo cambiado a rojo oscuro (red-800) 👇
       className="bg-red-800 rounded-3xl p-6 text-white shadow-xl sticky top-32"
@@ -27,7 +27,7 @@ export function OperacionSidebar() {
         {/* 👇 Subtítulo en rojo claro (red-300) 👇 */}
         <p className="text-red-300 text-xs uppercase tracking-widest font-semibold opacity-80 mt-1">Navegación</p>
       </div>
-      
+
       <nav className="space-y-3 max-h-[350px] overflow-y-auto pr-2 pb-2 
                       [&::-webkit-scrollbar]:w-1.5 
                       [&::-webkit-scrollbar-track]:bg-white/5 
@@ -44,9 +44,9 @@ export function OperacionSidebar() {
               href={item.href}
               className={cn(
                 "flex items-center justify-between p-3 rounded-2xl transition-all duration-300 group",
-                isActive 
+                isActive
                   // 👇 Botón activo con fondo blanco y texto rojo 👇
-                  ? "bg-white text-red-800 shadow-lg" 
+                  ? "bg-white text-red-800 shadow-lg"
                   : "hover:bg-white/10 text-white/80 hover:text-white"
               )}
             >

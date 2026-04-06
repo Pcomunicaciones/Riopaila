@@ -35,18 +35,6 @@ const pilaresTecnicos = [
     stats: "Genética Avanzada"
   },
   { 
-    icon: Droplets, 
-    title: "Riego Inteligente", 
-    desc: "Sistemas automatizados de goteo que reducen el consumo hídrico en un 30%.",
-    stats: "Precisión Hídrica" 
-  },
-  { 
-    icon: CloudSun, 
-    title: "Monitoreo Climático", 
-    desc: "Red de estaciones meteorológicas IoT para predicciones hiper-locales.",
-    stats: "Tiempo Real" 
-  },
-  { 
     icon: FlaskConical, 
     title: "Nutrición de Suelos", 
     desc: "Mapeo de nutrientes y aplicación dirigida para mantener la salud del ecosistema.",
@@ -115,10 +103,6 @@ export default function DesarrolloCultivosPage() {
               <p className="text-gray-600 leading-relaxed text-sm">
                 {item.desc}
               </p>
-            </div>
-            
-            <div className="mt-6 flex items-center gap-2 text-red-600 font-bold text-xs opacity-0 group-hover:opacity-100 transition-opacity">
-              VER PROTOCOLO TÉCNICO <ChevronRight size={14} />
             </div>
           </motion.div>
         ))}

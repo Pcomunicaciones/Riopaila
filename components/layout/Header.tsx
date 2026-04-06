@@ -18,7 +18,7 @@ const companySubmenu = [
 
 const operationSubmenu = [
   { name: "Cadena de Valor", href: "/Operacion/cadena-de-valor" },
-  { name: "Desarrollo Cultivos", href: "/Operacion/desarrollo-cultivos" },
+  //{ name: "Desarrollo Cultivos", href: "/Operacion/desarrollo-cultivos" },
   { name: "Belagro", href: "/Operacion/belagro" },
   { name: "Proyectos Inmobiliarios", href: "/Operacion/proyectos-inmobiliarios" },
   { name: "Otras Líneas", href: "/Operacion/otras-lineas" },
@@ -57,10 +57,10 @@ export function Header() {
   const renderLink = (item: any) => {
     if (item.isExternal) {
       return (
-        <a 
-          href={item.href} 
-          target="_blank" 
-          rel="noopener noreferrer" 
+        <a
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center justify-between px-4 py-3 text-sm text-gray-600 hover:bg-red-50 hover:text-red-700 transition-colors"
         >
           {item.name} <ExternalLink size={14} className="ml-2 opacity-50" />
@@ -68,13 +68,13 @@ export function Header() {
       )
     }
     return (
-      <Link 
-        href={item.href} 
+      <Link
+        href={item.href}
         onClick={() => setMobileMenuOpen(false)}
         className={cn(
-          "block px-4 py-3 text-sm transition-colors", 
-          pathname === item.href 
-            ? "bg-red-700 text-white font-bold" 
+          "block px-4 py-3 text-sm transition-colors",
+          pathname === item.href
+            ? "bg-red-700 text-white font-bold"
             : "text-gray-600 hover:bg-red-50 hover:text-red-700"
         )}
       >
@@ -85,37 +85,37 @@ export function Header() {
 
   return (
     <header className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-500", 
-     
-      isSolid 
-        ? "bg-gradient-to-r from-red-800/95 to-red-600/90 backdrop-blur-md shadow-lg py-2 border-b border-white/10" 
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+
+      isSolid
+        ? "bg-gradient-to-r from-red-800/95 to-red-600/90 backdrop-blur-md shadow-lg py-2 border-b border-white/10"
         : "bg-transparent py-5 border-b border-transparent shadow-none backdrop-blur-none"
     )}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          
+
           {/* LOGO */}
           <Link href="/" className="flex items-center space-x-2 md:space-x-3 group">
-            <img 
-              src="/Imagenes/LOGO-RIO-POS.png" 
-              alt="Logo" 
-              className="h-8 md:h-10 w-auto object-contain transition-all duration-300" 
+            <img
+              src="/Imagenes/LOGO-RIO-POS.png"
+              alt="Logo"
+              className="h-8 md:h-10 w-auto object-contain transition-all duration-300"
             />
             <div className="transition-colors text-white flex flex-col justify-center">
-              <p className="font-bold text-[14px] sm:text-lg md:text-xl xl:text-2xl leading-none tracking-tight">Riopaila Agrícola</p> 
+              <p className="font-bold text-[14px] sm:text-lg md:text-xl xl:text-2xl leading-none tracking-tight">Riopaila Agrícola</p>
               <p className="text-[9px] md:text-[11px] font-bold opacity-90 uppercase tracking-widest leading-none mt-1">S.A.</p>
             </div>
           </Link>
 
           {/* MENÚ DESKTOP */}
           <div className="hidden lg:flex items-center space-x-6">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="text-sm font-semibold transition-colors text-white/80 hover:text-white"
             >
               Inicio
             </Link>
-            
+
             {[
               { label: "Compañía", menu: companySubmenu, id: "compania" },
               { label: "Operación", menu: operationSubmenu, id: "Operacion" },
@@ -123,16 +123,16 @@ export function Header() {
               { label: "Grupos de Interés", menu: groupsSubmenu, id: "grupos-de-interes" },
             ].map((d) => {
               const isActive = pathname.startsWith(`/${d.id}`);
-              
+
               return (
-                <div 
-                  key={d.id} 
-                  className="relative" 
-                  onMouseEnter={() => setOpenDropdown(d.id)} 
+                <div
+                  key={d.id}
+                  className="relative"
+                  onMouseEnter={() => setOpenDropdown(d.id)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
                   <button className={cn(
-                    "flex items-center space-x-1 text-sm font-semibold py-2 transition-colors outline-none", 
+                    "flex items-center space-x-1 text-sm font-semibold py-2 transition-colors outline-none",
                     isActive ? "text-red-300 font-bold" : "text-white/80 hover:text-white"
                   )}>
                     <span>{d.label}</span>
@@ -141,10 +141,10 @@ export function Header() {
 
                   <AnimatePresence>
                     {openDropdown === d.id && (
-                      <motion.div 
-                        initial={{ opacity: 0, y: 10 }} 
-                        animate={{ opacity: 1, y: 0 }} 
-                        exit={{ opacity: 0, y: 10 }} 
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
                         className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden"
                       >
                         <div className="py-2">
@@ -160,8 +160,8 @@ export function Header() {
             })}
 
             {/* BOTÓN INVERSIONISTAS (DESKTOP) */}
-            <Link 
-              href="/inversionistas" 
+            <Link
+              href="/inversionistas"
               className="text-sm font-bold py-2 px-6 rounded-full border-2 transition-all border-white text-white hover:bg-white hover:text-red-700"
             >
               Inversionistas
@@ -169,8 +169,8 @@ export function Header() {
           </div>
 
           {/* BOTÓN MÓVIL */}
-          <button 
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 transition-colors text-white"
           >
             {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -181,10 +181,10 @@ export function Header() {
       {/* MENÚ MÓVIL */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div 
-            initial={{ opacity: 0, height: 0 }} 
-            animate={{ opacity: 1, height: "auto" }} 
-            exit={{ opacity: 0, height: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-white border-t border-gray-100 shadow-2xl overflow-y-auto max-h-[85vh]"
           >
             <div className="px-6 py-8 space-y-8 text-left">
@@ -204,8 +204,8 @@ export function Header() {
                 </div>
               ))}
               <div className="pt-6 border-t border-gray-100">
-                <Link 
-                  href="/inversionistas" 
+                <Link
+                  href="/inversionistas"
                   onClick={() => setMobileMenuOpen(false)}
                   className="block text-center py-4 border-2 border-red-700 text-red-700 rounded-2xl font-bold hover:bg-red-700 hover:text-white transition-all"
                 >
