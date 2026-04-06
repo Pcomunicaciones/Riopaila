@@ -25,3 +25,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# larger files (>100MB) not compatible with GitHub/Hostinger auto-deploy
+public/docs/InfGestionRIOPAILA2022.pdf
+public/docs/Informe-de-gestion-RIOPAILA-2022.pdf
+public/docs/Riopaila-EEFF-Separados-2022.pdf
