@@ -7,7 +7,7 @@ const informes = [
   {
     year: "2025",
     title: "Informe de Gestión y Sostenibilidad",
-    fileName: "Riopaila-ENTREGDOCUMENTOFINAL21032026N-comprimido.pdf"
+    fileName: "Riopaila- FINAL.pdf"
   },
   {
     year: "2024",

@@ -879,7 +879,7 @@ const InformeGestionView = () => (
       <div className="grid gap-2">
         <DocumentCell
           title="Informe de Gestión y Sostenibilidad 2025"
-          fileName="Riopaila-ENTREGDOCUMENTOFINAL21032026N-comprimido.pdf"
+          fileName="Riopaila- FINAL.pdf"
         />
         <DocumentCell
           title="Informe de Gestión y Sostenibilidad 2024"
@@ -1307,8 +1307,8 @@ export default function InversionistasPage() {
 
 
 
-      <button 
-        onClick={() => setIsSidebarOpen(!isSidebarOpen)} 
+      <button
+        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
         className="lg:hidden fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-red-600 text-white p-4 md:p-5 rounded-full shadow-2xl border-2 border-red-400 active:scale-90 transition-transform"
       >
         {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
