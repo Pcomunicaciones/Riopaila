@@ -58,7 +58,7 @@ export function PromoModal() {
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-red-900 via-red-800/90 to-transparent text-white">
                 <h3 className="text-xl font-bold italic leading-tight">Bienvenido</h3>
                 <p className="text-white/80 mt-1 text-xs">
-                  Bienvenido a la nueva web de Riopaila agricola.
+                  Bienvenido a la nueva web de Riopaila Agrícola.
                 </p>
                 <Link href="/" onClick={closeModal}>
                   <button

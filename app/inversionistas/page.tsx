@@ -700,7 +700,7 @@ const InfoRelevanteView = () => {
       f: "3/03/2023",
       t: "Citación a Asamblea Ordinaria",
       r: "Se adjunta convocatoria a la reunión ordinaria de la Asamblea de Accionistas de Riopaila Agrícola S.A., que se celebrará en forma Mixta (virtual y presencial), el día 29 de marzo de 2023, en Cali, domicilio de la Sociedad. Se incluye el Orden del Día",
-      doc: "PDU-_-Castilla-Agricola_Util-ene-a-oct-2022 (1).pdf"
+      doc: "PDU-Castilla-Agricola-Util-ene-a-oct-2022-1.pdf"
     },
     //quede aqui con la cargaada de los datos, necesito mejorar los pdfs
     {
@@ -865,7 +865,7 @@ const ArquitecturaControlView = () => (
         />
         <DocumentCell
           title="Política General de Control y Gestión de Riesgos"
-          fileName="PO-BGR-001-General-de-Control-y-de-Riesgos-Cast (1).pdf"
+          fileName="PO-BGR-001-General-de-Control-y-de-Riesgos-Cast-1.pdf"
         />
       </div>
     </DataCard>
@@ -908,7 +908,7 @@ const InformeGestionView = () => (
 //VISTA: ESTADOS FINANCIEROS
 const EstadosFinancierosView = () => {
   const archivos = [
-    { year: "2025", file: "RIOP-EEFF-Consolidados-Dic-2025-2 (1).pdf" },
+    { year: "2025", file: "RIOP-EEFF-Consolidados-Dic-2025-2-1.pdf" },
     { year: "2024", file: "RIOP-EEFF-Consolidados-Junio-2024-PROJD.pdf" },
     { year: "2023", file: "Riopaila-Estados-Financieros-Ano-2023.pdf" },
     { year: "2022", file: "RIOPAILA-EEFF-Separados-y-Consolidados.pdf" },
