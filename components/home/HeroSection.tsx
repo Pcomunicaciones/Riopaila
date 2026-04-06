@@ -65,7 +65,7 @@ export function HeroSection() {
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-black group font-[Tahoma,Verdana,sans-serif]">
-      
+
       {/* 1. FONDO DE IMAGEN (SLIDER) */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -91,8 +91,8 @@ export function HeroSection() {
 
       {/* 2. CONTENIDO DE TEXTO */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full flex flex-col justify-center">
-        <div className="max-w-4xl pb-24 md:pb-0"> 
-          
+        <div className="max-w-4xl pb-24 md:pb-0">
+
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -102,7 +102,7 @@ export function HeroSection() {
               transition={{ duration: 0.6, ease: "anticipate" }}
             >
               {/* Etiqueta / Tag */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
@@ -152,15 +152,15 @@ export function HeroSection() {
 
       {/* 3. CONTROLES DE NAVEGACIÓN */}
       <div className="absolute bottom-8 right-6 md:bottom-12 md:right-12 flex gap-3 md:gap-4 z-30">
-        <button 
-          onClick={prevSlide} 
+        <button
+          onClick={prevSlide}
           className="p-3 md:p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 active:scale-95"
           aria-label="Anterior"
         >
           <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
         </button>
-        <button 
-          onClick={nextSlide} 
+        <button
+          onClick={nextSlide}
           className="p-3 md:p-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 active:scale-95"
           aria-label="Siguiente"
         >
@@ -178,9 +178,8 @@ export function HeroSection() {
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`h-1.5 rounded-full transition-all duration-700 ${
-                current === index ? "w-8 md:w-12 bg-white" : "w-2 md:w-3 bg-white/30"
-              }`}
+              className={`h-1.5 rounded-full transition-all duration-700 ${current === index ? "w-8 md:w-12 bg-white" : "w-2 md:w-3 bg-white/30"
+                }`}
               aria-label={`Ir a diapositiva ${index + 1}`}
             />
           ))}
