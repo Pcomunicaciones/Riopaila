@@ -294,7 +294,7 @@ const EstructuraView = () => (
               <p>Juan Guillermo Salazar Vallecilla</p>
               <p>Rodrigo Caicedo Lourido</p>
             </div>
-            <DocumentCell title="Reglamento Comité Auditoría y Riesgos" fileName="Reglamento-Comité-Auditoria-y-Riesgos.pdf" />
+            <DocumentCell title="Reglamento Comité Auditoría y Riesgos" fileName="Reglamento-Comite-Auditoria-y-Riesgos.pdf" />
           </div>
 
           <div className="border-t border-gray-50 pt-4"></div> {/* Divisor sutil */}
@@ -316,7 +316,7 @@ const EstructuraView = () => (
                 <p className="text-[11px] text-gray-500 font-medium">Principal <span className="mx-1">|</span> C.C. 14.960.455</p>
               </div>
             </div>
-            <DocumentCell title="Reglamento Comité Sostenibilidad" fileName="Reglamento-Comité-de-Sostenibilidad-y-Gobierno-Corporativo.pdf" />
+            <DocumentCell title="Reglamento Comité Sostenibilidad" fileName="Reglamento-Comite-de-Sostenibilidad-y-Gobierno-Corporativo.pdf" />
           </div>
         </div>
       </DataCard>
@@ -791,11 +791,11 @@ const ConvocatoriaView = () => (
         />
         <DocumentCell
           title="Poder Personal Jurídica - Reunión Marzo 25 de 2026"
-          fileName="PODER-ASAMBLEA-GENERAL-DE-ACCIONISTAS-RIOPAILA-AGRÍCOLA_PERSONA-JURIDICA-Y-NATURAL.pdf"
+          fileName="PODER-ASAMBLEA-GENERAL-DE-ACCIONISTAS-RIOPAILA-AGRICOLA_PERSONA-JURIDICA-Y-NATURAL.pdf"
         />
         <DocumentCell
           title="Poder Personal Natural - Reunión Marzo 25 de 2026"
-          fileName="PODER-ASAMBLEA-GENERAL-DE-ACCIONISTAS-RIOPAILA-AGRÍCOLA_PERSONA-JURIDICA-Y-NATURAL.pdf"
+          fileName="PODER-ASAMBLEA-GENERAL-DE-ACCIONISTAS-RIOPAILA-AGRICOLA_PERSONA-JURIDICA-Y-NATURAL.pdf"
         />
       </div>
     </DataCard>
@@ -984,8 +984,8 @@ const InformesTrimestralesView = () => {
     // 2020
     { title: "EEFF Consolidados Septiembre 2020", doc: "EE.FF-RIOP-CONSOLIDADOS-TERCER-TRIMESTRE-2020-1.pdf" },
     { title: "EEFF Separados Septiembre 2020", doc: "EE.FF-RIOP-SEPARADOS-TERCER-TRIMESTRE-2020.pdf" },
-    { title: "EEFF Consolidados Junio 2020", doc: "Riopaila-Agrícola-S.A.-Estados-Financieros-Consolidados-Año-2020.pdf" },
-    { title: "EEFF Separados Junio 2020", doc: "Riopaila-Agrícola-S.A.-Estados-Financieros-Separados-Año-2020.pdf" },
+    { title: "EEFF Consolidados Junio 2020", doc: "Riopaila-Agricola-S.A.-Estados-Financieros-Consolidados-Ano-2020.pdf" },
+    { title: "EEFF Separados Junio 2020", doc: "Riopaila-Agricola-S.A.-Estados-Financieros-Separados-Ano-2020.pdf" },
     { title: "EEFF Consolidados Marzo 2020", doc: "EEFF-Consolidados-Marzo-2020.pdf" },
     { title: "EEFF Separados Marzo 2020", doc: "EEFF-Separados-Marzo-2020.pdf" },
 

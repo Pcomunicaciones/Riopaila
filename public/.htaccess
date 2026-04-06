@@ -1,0 +1,18 @@
+<IfModule mod_mime.c>
+    AddType application/pdf .pdf
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.pdf$">
+        Header set Content-Type "application/pdf"
+        Header set Content-Disposition "inline"
+        Header set X-Content-Type-Options "nosniff"
+        # Optional: Disable caching for debugging, can be removed later
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
+</IfModule>
+
+# Ensure UTF-8 for filenames if necessary
+AddDefaultCharset UTF-8
