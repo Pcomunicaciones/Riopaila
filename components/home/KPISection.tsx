@@ -51,26 +51,25 @@ export function KPISection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* ENCABEZADO DE LA SECCIÓN */}
-        <header className="mb-24 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-10">
+        <header className="mb-24 text-left flex flex-col md:flex-row md:items-end justify-between gap-10">
           <div className="max-w-3xl">
+            {/* Etiquetas Superiores */}
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <motion.div
+                initial={{ x: -20, opacity: 0 }}
+                animate={isInView ? { x: 0, opacity: 1 } : {}}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full text-red-600 text-xs font-black uppercase tracking-[0.4em] will-change-[transform,opacity]"
+              >
+                <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse shadow-[0_0_8px_#dc2626]" />
+                Impacto Real
+              </motion.div>
+              
+              <span className="text-[10px] font-bold tracking-[0.2em] text-red-600/80 uppercase">
+                Cifras Relevantes
+              </span>
+            </div>
             
-            {/* ======================================================================
-                AJUSTE DE CONTRASTE: ETIQUETA "IMPACTO REAL"
-                Le dimos un fondo blanco muy sutil, un borde claro y forzamos el color amarillo
-                para que no se pierda contra el fondo oscuro.
-                ====================================================================== */}
-            <motion.div
-              initial={{ x: -20, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full text-red-600 text-xs font-black uppercase tracking-[0.4em] mb-8 will-change-[transform,opacity]"
-            >
-              <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse shadow-[0_0_8px_#dc2626]" />
-              Impacto Real
-            </motion.div>
-            {/* ====================================================================== */}
-            
-            <span className="text-[10px] font-bold tracking-[0.2em] text-red-600/80 uppercase">Cifras Relevantes</span>
             <h2 className="text-5xl md:text-8xl font-black text-white leading-[0.9] tracking-tighter">
               Cifras que <br /> <span className="text-red-600">trascienden.</span>
             </h2>

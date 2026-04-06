@@ -102,8 +102,8 @@ export function Header() {
               className="h-8 md:h-10 w-auto object-contain transition-all duration-300" 
             />
             <div className="transition-colors text-white flex flex-col justify-center">
-              <p className="font-bold text-[13px] sm:text-base md:text-lg leading-tight tracking-tight">Riopaila Agricola</p> 
-              <p className="text-[8px] md:text-[10px] font-black opacity-80 uppercase tracking-widest leading-none">S.A.</p>
+              <p className="font-bold text-[14px] sm:text-lg md:text-xl xl:text-2xl leading-none tracking-tight">Riopaila Agrícola</p> 
+              <p className="text-[9px] md:text-[11px] font-bold opacity-90 uppercase tracking-widest leading-none mt-1">S.A.</p>
             </div>
           </Link>
 
