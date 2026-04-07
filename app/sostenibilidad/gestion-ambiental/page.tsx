@@ -268,14 +268,35 @@ export default function GestionAmbiental() {
               whileHover={{ scale: 1.02 }}
               className="group relative flex flex-col justify-between gap-6 p-10 bg-white rounded-[3rem] border border-gray-100 hover:border-[#dc2626]/40 transition-all shadow-sm hover:shadow-xl overflow-hidden"
             >
-              {/* --- ANIMACIÓN: LA NUBE FLOTANTE --- */}
-              <motion.div
-                animate={{ y: [-5, 5, -5] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-6 right-6 opacity-10 pointer-events-none z-0"
-              >
-                <Cloud size={100} className="text-red-500" fill="currentColor" />
-              </motion.div>
+              {/* --- ANIMACIÓN: SISTEMA DE NUBES EN MOVIMIENTO HORIZONTAL --- */}
+              <div className="absolute inset-0 overflow-hidden rounded-[3rem] pointer-events-none z-0">
+                <motion.div
+                  initial={{ left: "110%" }}
+                  animate={{ left: "-30%" }}
+                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-8 opacity-[0.06]"
+                >
+                  <Cloud size={140} className="text-[#dc2626]" fill="currentColor" />
+                </motion.div>
+                
+                <motion.div
+                  initial={{ left: "110%" }}
+                  animate={{ left: "-30%" }}
+                  transition={{ duration: 40, repeat: Infinity, ease: "linear", delay: 5 }}
+                  className="absolute top-2 opacity-[0.04]"
+                >
+                  <Cloud size={200} className="text-[#7f1d1d]" fill="currentColor" />
+                </motion.div>
+
+                <motion.div
+                  initial={{ left: "110%" }}
+                  animate={{ left: "-30%" }}
+                  transition={{ duration: 30, repeat: Infinity, ease: "linear", delay: 15 }}
+                  className="absolute bottom-32 opacity-[0.05]"
+                >
+                  <Cloud size={100} className="text-slate-400" fill="currentColor" />
+                </motion.div>
+              </div>
 
               <div className="relative z-10">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-2xl bg-red-50 text-red-600 transition-colors duration-300 group-hover:bg-[#7f1d1d] group-hover:text-white">
