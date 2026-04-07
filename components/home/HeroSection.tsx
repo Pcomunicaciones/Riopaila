@@ -10,7 +10,7 @@ const HERO_SLIDES = [
   {
     id: 1,
     tag: "Nuestra Esencia",
-    title: "Campos de Caña",
+    title: "Campos de Caña de Azúcar",
     description: "Extensas hectáreas cultivadas con las mejores prácticas agrícolas, base de nuestra excelencia y compromiso.",
     image: "/Imagenes/IMG_5870.png",
     theme: "#000000",
