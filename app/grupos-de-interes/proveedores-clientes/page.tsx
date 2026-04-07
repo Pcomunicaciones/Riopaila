@@ -26,8 +26,8 @@ const itemVariants: Variants = {
 
 const pulseVariants: Variants = {
   initial: { scale: 1, opacity: 0.5 },
-  animate: { 
-    scale: [1, 1.1, 1], 
+  animate: {
+    scale: [1, 1.1, 1],
     opacity: [0.5, 0.8, 0.5],
     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
   }
@@ -51,7 +51,7 @@ export default function ProveedoresPage() {
           <div className="h-[2px] w-12 bg-red-600" />
           <span className="text-red-600 font-bold text-xs uppercase tracking-[0.4em]">Alianzas Estratégicas</span>
         </div>
-        
+
         <h1 className="text-5xl md:text-6xl font-black text-red-800 tracking-tight not-italic">
           Proveedores y Clientes
         </h1>
@@ -66,14 +66,14 @@ export default function ProveedoresPage() {
         // 👇 Degradado actualizado a rojos corporativos 👇
         className="group relative bg-gradient-to-br from-red-900 to-red-950 text-white p-12 rounded-[3.5rem] shadow-2xl overflow-hidden"
       >
-        <motion.div 
+        <motion.div
           variants={pulseVariants}
           initial="initial"
           animate="animate"
           // 👇 Brillo sutil en amarillo/dorado 👇
-          className="absolute -top-10 -right-10 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl" 
+          className="absolute -top-10 -right-10 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl"
         />
-        
+
         <div className="relative z-10 flex flex-col lg:flex-row items-center gap-12">
           <div className="flex-shrink-0 relative">
             {/* 👇 Icono con borde y fondo sutil 👇 */}
@@ -84,7 +84,7 @@ export default function ProveedoresPage() {
               <ShieldCheck size={20} />
             </div>
           </div>
-          
+
           <div className="text-center lg:text-left space-y-4">
             <h2 className="text-4xl font-bold tracking-tight">Nuestra Red de Valor</h2>
             <p className="text-white/80 leading-relaxed text-xl max-w-2xl font-light">
@@ -97,9 +97,9 @@ export default function ProveedoresPage() {
       {/* PORTALES Y GESTIÓN (PORTAL DE PROVEEDORES) */}
       <div className="space-y-10">
         <h3 className="text-3xl font-bold text-red-800 flex items-center gap-4">
-           Portales y Gestión <div className="h-[1px] flex-1 bg-gray-100" />
+          Portales y Gestión <div className="h-[1px] flex-1 bg-gray-100" />
         </h3>
-        
+
         {/* Contenedor Flex para centrar la tarjeta única */}
         <div className="flex justify-center w-full">
           <motion.div
@@ -115,16 +115,16 @@ export default function ProveedoresPage() {
                 </div>
                 <span className="absolute top-0 right-0 text-[10px] font-black text-gray-300 group-hover:text-red-600 transition-colors uppercase tracking-widest">Acceso Seguro</span>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-3xl text-red-800 mb-3 tracking-tight">Portal de Proveedores</h4>
                 <p className="text-gray-500 text-base font-normal leading-relaxed max-w-xs mx-auto">
                   Acceda a la intranet corporativa para la gestión transparente de sus procesos.
                 </p>
               </div>
-              
+
               <a
-                href="http://201.219.242.106:8283/Intranet-Proveedores/login"
+                href="http://200.29.239.178:8283/Intranet-Proveedores/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 // 👇 Colores del botón actualizados 👇
@@ -138,12 +138,12 @@ export default function ProveedoresPage() {
       </div>
 
       {/* FOOTER DE APOYO */}
-      <motion.div 
+      <motion.div
         variants={itemVariants}
         className="text-center"
       >
         <p className="text-xs text-gray-400 font-bold uppercase tracking-[0.2em] hover:text-red-800 transition-colors cursor-default">
-          ¿Dudas con sus procesos? 
+          ¿Dudas con sus procesos?
         </p>
       </motion.div>
     </motion.div>
