@@ -2,14 +2,14 @@
 
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { useRef } from "react"
+import { Leaf, Droplets, Users, TrendingUp } from "lucide-react"
 import { KPICard } from "./KPICard"
 
 // --- DATOS DE LOS INDICADORES ---
 const kpiData = [
-  { value: 6217, suffix: "+", label: "Hectáreas", description: "De tierra productiva en operación constante." },
-  { value: 330, suffix: "+", label: "Colaboradores", description: "Trabajando por el desarrollo rural integral." },
+  { value: 5575, suffix: "+", label: "Hectáreas", description: "De tierra productiva en operación constante." },
+  { value: 305, suffix: "+", label: "Colaboradores", description: "Trabajando por el desarrollo rural integral." },
   { value: 108, suffix: "", label: "Años", description: "Construyendo historia agrícola en Colombia." },
-  { value: 95, suffix: "%", label: "Eficiencia", description: "En procesos de producción y tecnología." },
 ]
 
 export function KPISection() {
@@ -88,7 +88,7 @@ export function KPISection() {
         </header>
 
         {/* 3. GRID DE TARJETAS (Donde se inyecta el KPICard que me mostraste antes) */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto">
           {kpiData.map((kpi, index) => (
             <KPICard
               key={kpi.label}

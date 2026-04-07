@@ -2,15 +2,15 @@
 
 import { motion, useInView, useScroll, useTransform, useSpring, useMotionValue, useMotionTemplate } from "framer-motion"
 import { useRef, useEffect } from "react"
-import { Leaf, Droplets, Sun, Users, ArrowUpRight, Sparkles } from "lucide-react"
+import { Leaf, Droplets, Users, ArrowUpRight, Sparkles, TrendingUp, TreePine } from "lucide-react"
 
 // --- DATOS DE LAS INICIATIVAS (DATA) ---
-// Aquí definimos las tarjetas. Cada una tiene su ícono, título, descripción y color de acento.
+// Aquí definimos las tarjetas con información real extraída de las secciones internas.
 const items = [
-  { icon: Leaf, title: "Agricultura Responsable", desc: "Prácticas que regeneran el ecosistema mediante nutrición orgánica.", col: "#dc2626" }, // Red-600 (Corporate)
-  { icon: Droplets, title: "Gestión del Agua", desc: "Riego por goteo y monitoreo en tiempo real para preservar acuíferos.", col: "#c2410c" }, // Swapped for a less wine-like red-orange or similar? Wait, user wants reds.
-  { icon: Sun, title: "Energía Limpia", desc: "Paneles solares y biomasa para reducir nuestra huella de carbono.", col: "#be123c" }, // Rose-700 (Vibrant red)
-  { icon: Users, title: "Impacto Social", desc: "Fortalecemos el tejido social mediante educación y empleo digno.", col: "#b91c1c" }, // Red-700
+  { icon: TreePine, title: "Biodiversidad", desc: "Corredores biológicos y cero insecticidas para proteger ecosistemas en 420 hectáreas.", col: "#dc2626" }, // Red-600
+  { icon: Droplets, title: "Eficiencia Hídrica", desc: "Optimización mediante riego por ventanas y balance hídrico (Meta: 1.369 m³/Ha).", col: "#c2410c" }, // Red-Orange
+  { icon: Users, title: "Bienestar Social", desc: "Educación financiera ($1.1 MM gestionados) y beneficios para 309 colaboradores directos.", col: "#be123c" }, // Rose-700
+  { icon: TrendingUp, title: "Solidez Económica", desc: "Generación de valor con un EBITDA de $79.093 millones y variación del -3.9%.", col: "#b91c1c" }, // Red-700
 ]
 
 export function SustainabilitySection() {

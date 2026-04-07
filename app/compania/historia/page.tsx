@@ -60,13 +60,13 @@ const timelineEvents = [
 // --- COMPONENTE DE ÍTEM INDIVIDUAL ---
 function TimelineItem({ event, index }: { event: any, index: number }) {
   const isLeft = index % 2 === 0
-  
+
   return (
     <div className="relative mb-24 md:mb-40 last:mb-0">
       <div className={`flex flex-col md:flex-row items-center ${isLeft ? "md:flex-row" : "md:flex-row-reverse"} w-full`}>
-        
+
         {/* LADO DEL CONTENIDO */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -75,10 +75,9 @@ function TimelineItem({ event, index }: { event: any, index: number }) {
         >
           {/* Cabecera del Hito */}
           <div className={`flex items-center gap-4 mb-4 ${isLeft ? "md:flex-row-reverse justify-end" : "md:flex-row justify-start"}`}>
-            
-            <div className={`flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg text-white transform transition-transform duration-300 hover:scale-110 ${
-                event.highlight ? "bg-red-800" : "bg-red-600"
-            }`}>
+
+            <div className={`flex items-center justify-center w-14 h-14 rounded-2xl shadow-lg text-white transform transition-transform duration-300 hover:scale-110 ${event.highlight ? "bg-red-800" : "bg-red-600"
+              }`}>
               <event.icon size={26} />
             </div>
 
@@ -89,32 +88,31 @@ function TimelineItem({ event, index }: { event: any, index: number }) {
 
           {/* Tarjeta de Texto */}
           <div className="relative">
-             <div className={`hidden md:block absolute top-0 w-10 h-[2px] bg-red-300 ${isLeft ? "right-0" : "left-0"}`} />
-             
-             <h4 className="text-xl md:text-2xl font-bold text-red-700 mb-3 pt-4">{event.title}</h4>
-             <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
-               {event.description}
-             </p>
+            <div className={`hidden md:block absolute top-0 w-10 h-[2px] bg-red-300 ${isLeft ? "right-0" : "left-0"}`} />
+
+            <h4 className="text-xl md:text-2xl font-bold text-red-700 mb-3 pt-4">{event.title}</h4>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed font-medium">
+              {event.description}
+            </p>
           </div>
         </motion.div>
 
         {/* ESPACIO CENTRAL (Línea y Punto) */}
         <div className="relative w-full md:w-[10%] h-16 md:h-auto flex items-center justify-center my-4 md:my-0">
-           <motion.div 
-             initial={{ scale: 0 }}
-             whileInView={{ scale: 1 }}
-             viewport={{ once: true }}
-             className={`w-5 h-5 md:w-6 md:h-6 rounded-full border-4 shadow-md z-20 relative ${
-               event.highlight 
-               ? "bg-red-600 border-white ring-4 ring-red-600/20" 
-               : "bg-white border-red-800"
-             }`}
-           />
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            className={`w-5 h-5 md:w-6 md:h-6 rounded-full border-4 shadow-md z-20 relative ${event.highlight
+              ? "bg-red-600 border-white ring-4 ring-red-600/20"
+              : "bg-white border-red-800"
+              }`}
+          />
         </div>
 
         {/* LADO VACÍO (Equilibrio visual) */}
         <div className="hidden md:block w-[45%]" />
-        
+
       </div>
     </div>
   )
@@ -123,7 +121,7 @@ function TimelineItem({ event, index }: { event: any, index: number }) {
 // --- PÁGINA PRINCIPAL ---
 export default function HistoriaPage() {
   const timelineRef = useRef(null)
-  
+
   const { scrollYProgress } = useScroll({
     target: timelineRef,
     offset: ["start center", "end center"]
@@ -138,9 +136,9 @@ export default function HistoriaPage() {
   return (
     // FUENTE TAHOMA FORZADA EN TODO EL COMPONENTE
     <div className="relative space-y-24 md:space-y-32 bg-[#fafbfc] font-[Tahoma,Verdana,sans-serif]">
-      
+
       {/* HEADER DE LA SECCIÓN */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -158,7 +156,7 @@ export default function HistoriaPage() {
         <p className="text-lg md:text-xl text-gray-600 font-light max-w-2xl mx-auto leading-relaxed">
           Más de un siglo transformando la tierra. De ingenios individuales a un sólido grupo agroindustrial comprometido con la innovación y el futuro de Colombia.
         </p>
-        
+
         <div className="mt-16 flex justify-center opacity-50">
           <ArrowDownCircle size={32} className="animate-bounce text-red-600" />
         </div>
@@ -166,16 +164,16 @@ export default function HistoriaPage() {
 
       {/* TIMELINE CONTAINER */}
       <section ref={timelineRef} className="relative max-w-7xl mx-auto px-6 pb-20">
-        
+
         {/* LÍNEA DE FONDO (Gris) */}
         <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 -translate-x-1/2 rounded-full hidden md:block" />
-        
+
         {/* LÍNEA DE PROGRESO (Gradiente Rojo animado) */}
-        <motion.div 
+        <motion.div
           style={{ scaleY, originY: 0 }}
           className="absolute left-1/2 top-0 bottom-0 w-1.5 -translate-x-1/2 rounded-full bg-gradient-to-b from-red-800 via-red-600 to-red-400 z-0 shadow-[0_0_15px_rgba(220,38,38,0.4)] hidden md:block"
         >
-           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
         </motion.div>
 
         {/* ITEMS DEL TIMELINE */}
@@ -197,15 +195,15 @@ export default function HistoriaPage() {
           {/* Texturas de fondo */}
           <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-10 mix-blend-overlay"></div>
           <div className="absolute -top-20 -right-20 w-80 h-80 bg-red-500/20 rounded-full blur-[100px]"></div>
-          
+
           <Quote className="mx-auto w-12 h-12 text-red-300 mb-8 opacity-80" />
-          
+
           <h2 className="relative z-10 text-2xl md:text-3xl font-serif italic leading-relaxed mb-10 text-white/90">
             "Cultivamos la tierra, por un mundo mejor."
           </h2>
-          
+
           <div className="w-16 h-1 bg-red-400 mx-auto mb-6 rounded-full" />
-          
+
           <div className="relative z-10">
             <p className="font-bold tracking-widest text-xs uppercase text-white/80">Propósito Superior</p>
           </div>

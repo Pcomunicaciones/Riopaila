@@ -15,7 +15,7 @@ const HERO_SLIDES = [
     image: "/Imagenes/IMG_5870.png",
     theme: "#000000",
     primaryBtn: { text: "Conócenos", href: "/compania/quienes-somos" },
-    secondaryBtn: { text: "Nuestra Diferencia", href: "/compania/quienes-somos" }
+    secondaryBtn: { text: "Nuestra Evolución", href: "/compania/historia" }
   },
   {
     id: 2,
@@ -90,8 +90,8 @@ export function HeroSection() {
       </AnimatePresence>
 
       {/* 2. CONTENIDO DE TEXTO */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full h-full flex flex-col justify-center">
-        <div className="max-w-4xl pb-24 md:pb-0">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 w-full h-full flex flex-col justify-center">
+        <div className="max-w-[1000px] pb-24 md:pb-0">
 
           <AnimatePresence mode="wait">
             <motion.div
@@ -106,20 +106,20 @@ export function HeroSection() {
                 initial={{ opacity: 0, x: -10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="inline-block px-4 py-1.5 bg-white rounded-full mb-6 shadow-xl"
+                className="inline-block px-5 py-2 bg-white rounded-full mb-6 shadow-xl"
               >
-                <span className="text-[10px] font-black text-black uppercase tracking-[0.2em]">
+                <span className="text-[11px] font-black text-black uppercase tracking-[0.2em]">
                   {HERO_SLIDES[current].tag}
                 </span>
               </motion.div>
 
               {/* Título Principal */}
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white/95 leading-[1.1] md:leading-[1] mb-6 drop-shadow-2xl">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] xl:text-[5.5rem] font-black text-white/95 leading-[1.1] md:leading-[1] mb-6 drop-shadow-2xl tracking-tight">
                 {HERO_SLIDES[current].title}
               </h1>
 
               {/* Descripción */}
-              <p className="text-sm sm:text-base md:text-xl text-white/80 mb-8 md:mb-10 leading-relaxed max-w-xl font-light">
+              <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 md:mb-12 leading-relaxed max-w-xl font-light">
                 {HERO_SLIDES[current].description}
               </p>
 

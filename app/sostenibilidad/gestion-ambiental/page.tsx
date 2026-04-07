@@ -18,7 +18,7 @@ const AnimatedNumber = ({ end, decimals = 0, duration = 2000 }: { end: number, d
     const updateCounter = (timestamp: number) => {
       if (!startTime) startTime = timestamp
       const progress = Math.min((timestamp - startTime) / duration, 1)
-      
+
       const easeProgress = 1 - Math.pow(1 - progress, 4)
       setValue(end * easeProgress)
 
@@ -57,7 +57,7 @@ const itemVariants: Variants = {
 }
 
 export default function GestionAmbiental() {
-  
+
   // Acciones Clave de Riopaila
   const accionesClaves = [
     "Evaluar y formular proyectos de sistemas de riego que utilicen energías renovables.",
@@ -69,7 +69,8 @@ export default function GestionAmbiental() {
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes dropFall {
           0% { top: -10%; opacity: 0; transform: scaleY(0.5); }
           20% { opacity: 1; transform: scaleY(1); }
@@ -100,25 +101,25 @@ export default function GestionAmbiental() {
               Comprometidos con el Medio Ambiente
             </span>
           </div>
-          
+
           <h1 className="text-5xl md:text-6xl font-black text-[#7f1d1d] tracking-tight">
             Gestión Ambiental
           </h1>
-          
+
           <p className="text-gray-600 mt-8 text-xl leading-relaxed max-w-3xl font-normal">
             El fortalecimiento de una cultura de preservación hace parte de nuestra filosofía empresarial. Propiciamos la participación e implementación de acciones que contribuyen a mitigar el cambio climático y los impactos ambientales.
           </p>
         </motion.div>
 
         <div className="px-6 max-w-7xl mx-auto space-y-10">
-          
+
           {/* ================= EJE 1: GESTIÓN HÍDRICA ================= */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="group relative bg-white rounded-[3rem] p-1 md:p-2 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] border border-gray-100 overflow-hidden"
           >
             <div className="bg-slate-50/50 rounded-[2.8rem] p-8 md:p-12 flex flex-col gap-10">
-              
+
               <div className="w-full">
                 <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold mb-4 shadow-sm border border-blue-100">
                   <Waves size={16} className="animate-pulse" /> Elemento Esencial de Vida
@@ -132,7 +133,7 @@ export default function GestionAmbiental() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                
+
                 {/* Balde 1: Eficiencia de Riego (Mantenemos azul por el agua) */}
                 <div className="flex items-center gap-6 bg-white p-6 rounded-[2rem] border border-gray-100 shadow-sm hover:border-blue-200 transition-all">
                   <div className="relative w-16 h-24 border-[3px] border-gray-200 rounded-b-xl rounded-t-[4px] overflow-hidden shrink-0 bg-gray-50 shadow-inner">
@@ -151,7 +152,7 @@ export default function GestionAmbiental() {
                   </div>
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-2 text-[14px] font-bold text-[#7f1d1d] mb-1">
-                      <Droplets size={16} className="shrink-0"/> <span className="truncate">Riego por Ventanas</span>
+                      <Droplets size={16} className="shrink-0" /> <span className="truncate">Riego por Ventanas</span>
                     </div>
                     <p className="text-3xl font-black text-blue-600 leading-none mb-2">
                       +<AnimatedNumber end={10} decimals={0} />%
@@ -180,10 +181,10 @@ export default function GestionAmbiental() {
                   </div>
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-2 text-[14px] font-bold text-[#7f1d1d] mb-1">
-                      <Leaf size={16} className="shrink-0"/> <span className="truncate">Consumo Específico</span>
+                      <Leaf size={16} className="shrink-0" /> <span className="truncate">Consumo Específico</span>
                     </div>
                     <p className="text-3xl font-black text-[#dc2626] leading-none mb-2">
-                      <AnimatedNumber end={1070} decimals={0} /> <span className="text-sm">m³/Ha</span>
+                      <AnimatedNumber end={1369} decimals={0} /> <span className="text-sm">m³/Ha</span>
                     </p>
                     <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest break-words leading-tight">
                       Compromiso de reducción de huella hídrica (Meta).
@@ -197,7 +198,7 @@ export default function GestionAmbiental() {
 
           {/* ================= EJES 2 y 3: TARJETAS INTERACTIVAS ================= */}
           <div className="grid md:grid-cols-2 gap-8">
-            
+
             {/* EJE 2: Control y Corredores Biológicos */}
             <motion.div
               variants={itemVariants}
@@ -212,19 +213,19 @@ export default function GestionAmbiental() {
                 <p className="text-gray-500 font-normal leading-relaxed mb-8">
                   Estrategia sectorial con cero aplicaciones de insecticidas. Mantenemos el equilibrio del ecosistema mediante fauna benéfica y vegetación natural.
                 </p>
-                
+
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex flex-col justify-center text-center">
                     <p className="text-3xl font-black text-[#7f1d1d]">
-                      <AnimatedNumber end={211} decimals={0} />
+                      <AnimatedNumber end={420} decimals={0} />
                     </p>
-                    <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-tight mt-1">Hectáreas<br/>Conservadas</p>
+                    <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-tight mt-1">Hectáreas<br />Conservadas</p>
                   </div>
                   <div className="bg-slate-50 p-4 rounded-2xl border border-slate-100 flex flex-col justify-center text-center">
                     <p className="text-3xl font-black text-[#dc2626]">
                       <AnimatedNumber end={1.1} decimals={1} />%
                     </p>
-                    <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-tight mt-1">Infestación<br/>Diatraea</p>
+                    <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-tight mt-1">Infestación<br />Diatraea</p>
                   </div>
                 </div>
 
@@ -232,12 +233,12 @@ export default function GestionAmbiental() {
                 <div className="relative h-24 w-full rounded-2xl bg-gradient-to-b from-[#fef2f2] to-white border border-[#fee2e2] overflow-hidden p-3 flex gap-5 items-end justify-center shadow-inner">
                   {/* Sol animado de fondo */}
                   <Sun className="absolute top-2 right-2 h-6 w-6 text-amber-400 animate-[pulse_4s_ease-in-out_infinite] opacity-50" />
-                  
+
                   {/* Los arbolitos */}
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className="flex flex-col items-center relative z-10">
                       {/* Las hojas (copa del árbol - verde natural) */}
-                      <motion.div 
+                      <motion.div
                         className="w-7 h-7 bg-[#4caf50] rounded-full shadow-sm z-10 border border-[#388e3c]"
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
@@ -245,7 +246,7 @@ export default function GestionAmbiental() {
                         viewport={{ once: true }}
                       />
                       {/* El tronco */}
-                      <motion.div 
+                      <motion.div
                         className="w-2.5 bg-[#795548] rounded-t-sm -mt-2"
                         initial={{ height: 0 }}
                         whileInView={{ height: "28px" }}
@@ -254,7 +255,7 @@ export default function GestionAmbiental() {
                       />
                     </div>
                   ))}
-                  
+
                   {/* Base de tierra/pasto */}
                   <div className="absolute bottom-0 left-0 w-full h-3 bg-[#fca5a5] opacity-30 rounded-b-xl" />
                 </div>
@@ -284,36 +285,36 @@ export default function GestionAmbiental() {
                 <p className="text-gray-500 font-normal leading-relaxed mb-6">
                   Entendemos que somos pieza importante para la mitigación. Realizamos la primera medición de nuestras emisiones de Gases Efecto Invernadero (GEI).
                 </p>
-                
-                {/* Tarjetas de Medición de Gases con partículas */}
+
+                {/* Tarjetas de Medición de Emisiones GEI */}
                 <div className="space-y-4 relative">
-                  
+
                   <div className="bg-gradient-to-br from-slate-50 to-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between relative overflow-hidden">
-                    {/* Partículas animadas de CO2 bajando (captura) */}
-                    <motion.div animate={{ y: [-10, 20], opacity: [0, 1, 0] }} transition={{ duration: 2.5, repeat: Infinity }} className="absolute right-4 top-1 text-[8px] font-bold text-slate-400">CO₂</motion.div>
-                    
+                    {/* Partículas animadas de CO2 */}
+                    <motion.div animate={{ y: [-10, 20], opacity: [0, 1, 0] }} transition={{ duration: 2.5, repeat: Infinity }} className="absolute right-4 top-1 text-[8px] font-bold text-slate-400">CO₂-eq</motion.div>
+
                     <div>
-                      <h5 className="font-black text-slate-700 uppercase tracking-wide text-xs mb-1">CO₂ Capturado</h5>
-                      <p className="text-xs text-slate-500 font-bold">Mitigación activa</p>
+                      <h5 className="font-black text-slate-700 uppercase tracking-wide text-xs mb-1">Alcance 1</h5>
+                      <p className="text-xs text-slate-500 font-bold">Emisiones directas</p>
                     </div>
                     <div className="text-right">
                       <p className="text-2xl font-black text-slate-700">
-                        <AnimatedNumber end={557} /> <span className="text-sm font-bold">Mil ton.</span>
+                        <AnimatedNumber end={36} /> <span className="text-sm font-bold">Ton.</span>
                       </p>
                     </div>
                   </div>
 
                   <div className="bg-gradient-to-br from-[#fef2f2] to-white p-5 rounded-2xl border border-[#fee2e2] shadow-sm flex items-center justify-between relative overflow-hidden">
-                    {/* Partículas animadas de O2 subiendo (liberación) */}
-                    <motion.div animate={{ y: [20, -10], opacity: [0, 1, 0] }} transition={{ duration: 2, repeat: Infinity, delay: 0.5 }} className="absolute right-4 bottom-1 text-[8px] font-bold text-[#dc2626]">O₂</motion.div>
+                    {/* Partículas animadas de CO2 */}
+                    <motion.div animate={{ y: [-10, 20], opacity: [0, 1, 0] }} transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }} className="absolute right-4 top-1 text-[8px] font-bold text-[#dc2626]">CO₂-eq</motion.div>
 
                     <div>
-                      <h5 className="font-black text-[#7f1d1d] uppercase tracking-wide text-xs mb-1">O₂ Liberado</h5>
-                      <p className="text-xs text-[#dc2626] font-bold">Aporte de oxígeno</p>
+                      <h5 className="font-black text-[#7f1d1d] uppercase tracking-wide text-xs mb-1">Alcance 2</h5>
+                      <p className="text-xs text-[#dc2626] font-bold">Emisiones indirectas</p>
                     </div>
                     <div className="text-right">
                       <p className="text-2xl font-black text-[#dc2626]">
-                        <AnimatedNumber end={390} /> <span className="text-sm font-bold">Mil ton.</span>
+                        <AnimatedNumber end={24} /> <span className="text-sm font-bold">Ton.</span>
                       </p>
                     </div>
                   </div>
@@ -326,34 +327,34 @@ export default function GestionAmbiental() {
 
           {/* ================= ACCIONES CLAVES PARA LA MITIGACIÓN ================= */}
           <motion.div variants={itemVariants} className="bg-[#7f1d1d] rounded-[3rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
-             {/* Decoración de fondo */}
-             <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
-             
-             <div className="relative z-10 mb-10 text-center md:text-left">
-               <h3 className="text-3xl md:text-4xl font-black text-white mb-3">Acciones Claves para la Mitigación</h3>
-               <p className="text-[#fca5a5] text-lg font-medium">Iniciativas estratégicas para reducir nuestro impacto ambiental.</p>
-             </div>
+            {/* Decoración de fondo */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3"></div>
 
-             <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-               {accionesClaves.map((accion, index) => (
-                 <motion.div 
-                   key={index}
-                   whileHover={{ y: -5, scale: 1.02 }}
-                   className="bg-white/10 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-start gap-4 shadow-lg"
-                 >
-                   <div className="shrink-0 w-8 h-8 rounded-full bg-[#dc2626] text-white flex items-center justify-center font-black text-sm shadow-md">
-                     {index + 1}
-                   </div>
-                   <p className="text-white/90 text-sm font-medium leading-relaxed">
-                     {accion}
-                   </p>
-                 </motion.div>
-               ))}
-             </div>
+            <div className="relative z-10 mb-10 text-center md:text-left">
+              <h3 className="text-3xl md:text-4xl font-black text-white mb-3">Acciones Claves para la Mitigación</h3>
+              <p className="text-[#fca5a5] text-lg font-medium">Iniciativas estratégicas para reducir nuestro impacto ambiental.</p>
+            </div>
+
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {accionesClaves.map((accion, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white/10 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex items-start gap-4 shadow-lg"
+                >
+                  <div className="shrink-0 w-8 h-8 rounded-full bg-[#dc2626] text-white flex items-center justify-center font-black text-sm shadow-md">
+                    {index + 1}
+                  </div>
+                  <p className="text-white/90 text-sm font-medium leading-relaxed">
+                    {accion}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           {/* PIE DE SECCIÓN: REPORTE (Sin cursiva y con fuente estricta) */}
-          <motion.div 
+          <motion.div
             variants={itemVariants}
             className="flex flex-col md:flex-row items-center justify-between p-8 bg-[#fef2f2] rounded-[2rem] border border-[#fee2e2] shadow-sm"
           >
@@ -365,15 +366,15 @@ export default function GestionAmbiental() {
                 Riopaila Agrícola: Construyendo un futuro sostenible hectárea a hectárea.
               </p>
             </div>
-            
-            <Link 
-              href="/sostenibilidad/informes" 
+
+            <Link
+              href="/sostenibilidad/informes"
               className="text-xs font-black uppercase tracking-widest text-[#7f1d1d] hover:text-[#dc2626] transition-colors border-b-2 border-[#dc2626] pb-1"
             >
               Ver Informe de Sostenibilidad
             </Link>
           </motion.div>
-          
+
         </div>
       </motion.div>
     </>

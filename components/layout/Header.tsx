@@ -42,6 +42,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [openMobileSection, setOpenMobileSection] = useState<string | null>(null)
   const pathname = usePathname()
 
   const isHome = pathname === "/"
@@ -61,6 +62,10 @@ export function Header() {
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            setMobileMenuOpen(false)
+            setOpenMobileSection(null)
+          }}
           className="flex items-center justify-between px-4 py-3 text-sm text-gray-600 hover:bg-red-50 hover:text-red-700 transition-colors"
         >
           {item.name} <ExternalLink size={14} className="ml-2 opacity-50" />
@@ -70,7 +75,10 @@ export function Header() {
     return (
       <Link
         href={item.href}
-        onClick={() => setMobileMenuOpen(false)}
+        onClick={() => {
+          setMobileMenuOpen(false)
+          setOpenMobileSection(null)
+        }}
         className={cn(
           "block px-4 py-3 text-sm transition-colors",
           pathname === item.href
@@ -187,27 +195,75 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-white border-t border-gray-100 shadow-2xl overflow-y-auto max-h-[85vh]"
           >
-            <div className="px-6 py-8 space-y-8 text-left">
+            <div className="px-6 py-8 space-y-4 text-left">
+              {/* Opción Inicio en Móvil */}
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "block py-3 text-lg font-bold border-b border-gray-50",
+                  pathname === "/" ? "text-red-700" : "text-gray-800"
+                )}
+              >
+                Inicio
+              </Link>
+
               {[
-                { label: "Compañía", menu: companySubmenu },
-                { label: "Operación", menu: operationSubmenu },
-                { label: "Sostenibilidad", menu: sustainabilitySubmenu },
-                { label: "Grupos de Interés", menu: groupsSubmenu },
-              ].map((section, idx) => (
-                <div key={idx} className="space-y-3">
-                  <p className="text-[10px] font-black uppercase text-gray-400 tracking-[0.2em]">{section.label}</p>
-                  <div className="grid grid-cols-1 gap-2">
-                    {section.menu.map((item, i) => (
-                      <div key={i}>{renderLink(item)}</div>
-                    ))}
+                { label: "Compañía", menu: companySubmenu, id: "compania" },
+                { label: "Operación", menu: operationSubmenu, id: "operacion" },
+                { label: "Sostenibilidad", menu: sustainabilitySubmenu, id: "sostenibilidad" },
+                { label: "Grupos de Interés", menu: groupsSubmenu, id: "grupos" },
+              ].map((section, idx) => {
+                const isOpen = openMobileSection === section.id;
+                
+                return (
+                  <div key={idx} className="border-b border-gray-50">
+                    <button
+                      onClick={() => setOpenMobileSection(isOpen ? null : section.id)}
+                      className="flex items-center justify-between w-full py-4 text-left"
+                    >
+                      <span className={cn(
+                        "text-lg font-bold transition-colors",
+                        isOpen ? "text-red-700" : "text-gray-800"
+                      )}>
+                        {section.label}
+                      </span>
+                      <ChevronDown 
+                        size={20} 
+                        className={cn(
+                          "text-gray-400 transition-transform duration-300",
+                          isOpen && "rotate-180 text-red-700"
+                        )} 
+                      />
+                    </button>
+                    
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pb-4 pl-4 space-y-1">
+                            {section.menu.map((item, i) => (
+                              <div key={i} className="border-l-2 border-red-100">
+                                {renderLink(item)}
+                              </div>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                </div>
-              ))}
-              <div className="pt-6 border-t border-gray-100">
+                );
+              })}
+
+              <div className="pt-6">
                 <Link
                   href="/inversionistas"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-center py-4 border-2 border-red-700 text-red-700 rounded-2xl font-bold hover:bg-red-700 hover:text-white transition-all"
+                  className="block text-center py-4 bg-red-700 text-white rounded-2xl font-bold hover:bg-red-800 transition-all shadow-md shadow-red-200"
                 >
                   Inversionistas
                 </Link>
