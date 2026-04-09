@@ -37,6 +37,10 @@ const groupsSubmenu = [
   { name: "Portal de Autogestión Buk", href: "https://castillaagricola.buk.co", isExternal: true },
 ]
 
+const contactSubmenu = [
+  { name: "Protección Datos Personales", href: "/contacto/proteccion-datos-personales" },
+]
+
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -129,6 +133,7 @@ export function Header() {
               { label: "Operación", menu: operationSubmenu, id: "Operacion" },
               { label: "Sostenibilidad", menu: sustainabilitySubmenu, id: "sostenibilidad" },
               { label: "Grupos de Interés", menu: groupsSubmenu, id: "grupos-de-interes" },
+              { label: "Contacto", menu: contactSubmenu, id: "contacto" },
             ].map((d) => {
               const isActive = pathname.startsWith(`/${d.id}`);
 
@@ -213,6 +218,7 @@ export function Header() {
                 { label: "Operación", menu: operationSubmenu, id: "operacion" },
                 { label: "Sostenibilidad", menu: sustainabilitySubmenu, id: "sostenibilidad" },
                 { label: "Grupos de Interés", menu: groupsSubmenu, id: "grupos" },
+                { label: "Contacto", menu: contactSubmenu, id: "contacto" },
               ].map((section, idx) => {
                 const isOpen = openMobileSection === section.id;
                 
