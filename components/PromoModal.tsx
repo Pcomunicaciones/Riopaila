@@ -50,7 +50,7 @@ export function PromoModal() {
             {/* Imagen */}
             <div className="relative w-full" style={{ aspectRatio: "1 / 0.75" }}>
               <Image
-                src="/Imagenes/belagro.jpg"
+                src="/Imagenes/IMG_5924.jpg"
                 alt="Castilla Agrícola"
                 fill
                 className="object-cover"
