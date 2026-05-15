@@ -948,6 +948,9 @@ const EstadosFinancierosView = () => {
 const InformesTrimestralesView = () => {
 
   const informesList = [
+    //2026
+    { title: "EEFF Consolidados Marzo 2026", doc: "RIOP EFFF Consolidados Marzo 2026.pdf" },
+    { title: "EEFF Separados Marzo 2026", doc: "RIOP EEFF Separados Marzo 2026.pdf" },
     // 2025
     { title: "EEFF Consolidados Septiembre 2025", doc: "AS-8294-25-Riopaila-Agricola-EFFF-completos-Consolidados-Septiembre-2025.pdf" },
     { title: "EEFF Separados Septiembre 2025", doc: "AS-8285-25-Riopaila-Agricola-EEFF-completos-Separados-Septiembre-2025.pdf" },
