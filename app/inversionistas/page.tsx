@@ -410,6 +410,13 @@ const ConglomeradosView = () => (
 // --- VISTA: INFORMACIÓN RELEVANTE ---
 const InfoRelevanteView = () => {
   const hechos = [
+    //15-05-2026
+    {
+      f: "15/05/2026",
+      t: "Informes de fin de Ejercicio",
+      r: "Se presenta el informe correspondiente al primer trimestre de 2026, en cumplimiento de lo dispuesto en las Circulares Externas 012 de 2022 y 031 de 2021 emitidas por la Superintendencia Financiera de Colombia.",
+      doc: "Riopaila Agrícola_ I Trimestre 2026.pdf"
+    },
     {
       f: "17/04/2026",
       t: "Informes de fin de Ejercicio",
