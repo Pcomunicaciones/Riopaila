@@ -89,14 +89,32 @@ const GrowLineVertical = ({ height = "h-10", delay }: { height?: string, delay: 
   </div>
 )
 
-const GrowLineHorizontal = ({ width = "w-[420px]", delay }: { width?: string, delay: number }) => (
-  <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ${width} h-[2px] bg-red-100 z-0`}>
+const GrowLineHorizontalDashedLeft = ({ width = "w-[225px]", delay }: { width?: string, delay: number }) => (
+  <div className={`absolute top-1/2 right-1/2 ${width} h-[2px] -translate-y-1/2 z-0`}>
+    {/* Fondo punteado en rojo claro */}
+    <div className="absolute inset-0 border-t-2 border-dashed border-red-100" />
+    {/* Línea animada punteada en rojo oscuro */}
     <motion.div 
       initial={{ scaleX: 0 }} 
       whileInView={{ scaleX: 1 }} 
       viewport={{ once: true }} 
       transition={{ duration: 0.6, delay, ease: "easeInOut" }} 
-      className="w-full h-full bg-red-800 origin-center" 
+      className="absolute inset-0 border-t-2 border-dashed border-red-800 origin-right" 
+    />
+  </div>
+)
+
+const GrowLineHorizontalSolidRight = ({ width = "w-[225px]", delay }: { width?: string, delay: number }) => (
+  <div className={`absolute top-1/2 left-1/2 ${width} h-[2px] -translate-y-1/2 z-0`}>
+    {/* Fondo continuo en rojo claro */}
+    <div className="absolute inset-0 bg-red-100" />
+    {/* Línea animada continua en rojo oscuro */}
+    <motion.div 
+      initial={{ scaleX: 0 }} 
+      whileInView={{ scaleX: 1 }} 
+      viewport={{ once: true }} 
+      transition={{ duration: 0.6, delay, ease: "easeInOut" }} 
+      className="absolute inset-0 bg-red-800 origin-left" 
     />
   </div>
 )
@@ -131,7 +149,8 @@ export default function GobiernoCorporativoPage() {
 
           {/* NIVEL 2: CONTROLES Y JUNTA */}
           <div className="relative w-full flex justify-center items-center py-3">
-             <GrowLineHorizontal width="w-[450px]" delay={0.5} />
+             <GrowLineHorizontalDashedLeft delay={0.5} />
+             <GrowLineHorizontalSolidRight delay={0.5} />
 
              <div className="flex items-center gap-4 z-10">
                 <OrgCard data={mainOrgData.revisoria} delay={0.7} />

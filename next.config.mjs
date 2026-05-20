@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <--- AGREGA ESTA LÍNEA
+  // output: 'export', // Desactivado para permitir API Routes (envío de correos)
   typescript: {
     ignoreBuildErrors: true,
   },

@@ -144,11 +144,13 @@ export function HeroSection() {
                   </Link>
                 </motion.div>
               </div>
+
             </motion.div>
           </AnimatePresence>
 
         </div>
       </div>
+
 
       {/* 3. CONTROLES DE NAVEGACIÓN */}
       <div className="absolute bottom-8 right-6 md:bottom-12 md:right-12 flex gap-3 md:gap-4 z-30">

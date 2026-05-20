@@ -102,6 +102,23 @@ export function Footer() {
                   administracion.corp@agroriocas.com</p>
               </div>
             </div>
+
+            {/* 🔒 LÍNEA TRANSPARENTE */}
+            <div className="space-y-4">
+              <h4 className="text-stone-300 font-bold text-[10px] uppercase tracking-[0.2em]">Ética y Transparencia</h4>
+              <Link
+                href="/compania/linea-transparente"
+                className="flex items-center gap-2.5 group w-fit"
+              >
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/15 border border-emerald-500/30 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-wider">Confidencial</span>
+                </span>
+                <span className="text-sm text-white/80 group-hover:text-white group-hover:underline transition-colors">
+                  Línea Transparente
+                </span>
+              </Link>
+            </div>
           </div>
 
           {/* COL 3: MAPA (Neutro) */}
@@ -148,6 +165,14 @@ export function Footer() {
           <p className="text-[10px] text-stone-400 tracking-wide">
             © {currentYear} <span className="text-white">Riopaila Agrícola S.A.</span> - Todos los derechos reservados.
           </p>
+          <Link
+            href="/compania/linea-transparente"
+            className="flex items-center gap-2 text-[10px] text-stone-400 hover:text-emerald-400 transition-colors tracking-wide group"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 group-hover:animate-pulse" />
+            Línea Transparente · Canal de Denuncias
+            <ArrowUpRight size={10} />
+          </Link>
         </div>
       </div>
     </footer>

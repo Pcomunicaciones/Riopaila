@@ -2,7 +2,7 @@
 
 import React from "react"
 import { motion, Variants } from "framer-motion"
-import { Users, Rocket, Heart, ChevronRight, Award, LucideIcon } from "lucide-react"
+import { Users, Rocket, Heart, ChevronRight, Award, LucideIcon, Search, Eye } from "lucide-react"
 
 /* DEFINICIÓN DE TIPOS Y VARIANTES */
 
@@ -10,9 +10,9 @@ const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { 
-      staggerChildren: 0.12, 
-      delayChildren: 0.2 
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.2
     },
   },
 }
@@ -23,8 +23,8 @@ const itemVariants: Variants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { 
-      duration: 0.8, 
+    transition: {
+      duration: 0.8,
       ease: [0.16, 1, 0.3, 1]
     },
   },
@@ -34,10 +34,10 @@ const floatingAnimation: Variants = {
   initial: { y: 0 },
   animate: {
     y: [-10, 0, -10],
-    transition: { 
-      duration: 4, 
-      repeat: Infinity, 
-      ease: "easeInOut" 
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut"
     }
   }
 }
@@ -58,7 +58,7 @@ const BENEFICIOS: Beneficio[] = [
 
 export default function TalentoPage() {
   return (
-    <motion.div 
+    <motion.div
       style={{ fontFamily: 'Tahoma, Geneva, sans-serif' }}
       className="space-y-20 pb-20"
       initial="hidden"
@@ -73,11 +73,11 @@ export default function TalentoPage() {
           <div className="h-[2px] w-12 bg-red-600" />
           <span className="text-red-600 font-bold text-xs uppercase tracking-[0.4em]">Cultura Corporativa</span>
         </div>
-        
+
         <h1 className="text-5xl md:text-7xl font-black text-red-800 not-italic tracking-tighter leading-none">
           Trabaja con nosotros
         </h1>
-        
+
         <p className="text-xl text-gray-500 max-w-2xl leading-relaxed font-normal not-italic border-l-4 border-red-50 pl-6">
           Valoramos el talento humano como motor de innovación. Buscamos mentes creativas.
         </p>
@@ -86,7 +86,7 @@ export default function TalentoPage() {
       {/* GRID DE BENEFICIOS */}
       <div className="grid md:grid-cols-3 gap-8">
         {BENEFICIOS.map((benefit, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             variants={itemVariants}
             whileHover={{ y: -12, backgroundColor: "#ffffff" }}
@@ -102,13 +102,13 @@ export default function TalentoPage() {
       </div>
 
       {/* PORTAL DE BUK */}
-      <motion.div 
+      <motion.div
         variants={itemVariants}
         // 👇 Fondo degradado a rojos 👇
         className="relative group bg-gradient-to-br from-red-900 to-red-950 rounded-[4rem] p-1 shadow-2xl overflow-hidden"
       >
         <div className="relative z-10 bg-red-900/40 backdrop-blur-sm rounded-[3.9rem] p-12 md:p-16 flex flex-col items-center text-center">
-          <motion.div 
+          <motion.div
             variants={floatingAnimation}
             initial="initial"
             animate="animate"
@@ -118,9 +118,9 @@ export default function TalentoPage() {
           </motion.div>
 
           <h3 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight not-italic">Portal de Candidatos</h3>
-          
-          <a 
-            href="https://castillaagricola.buk.co/trabaja-con-nosotros" 
+
+          <a
+            href="https://agricolas.buk.co/trabaja-con-nosotros"
             target="_blank"
             rel="noopener noreferrer"
             // 👇 Botón actualizado a blanco/rojo 👇
@@ -130,6 +130,8 @@ export default function TalentoPage() {
           </a>
         </div>
       </motion.div>
+
+
 
       {/* FOOTER DE CONFIANZA */}
       <motion.div variants={itemVariants} className="text-center opacity-60">

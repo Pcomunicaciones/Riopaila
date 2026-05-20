@@ -24,7 +24,7 @@ export function GroupsInterestSidebar() {
   const pathname = usePathname()
 
   return (
-    <aside 
+    <aside
       style={{ fontFamily: 'Tahoma, Geneva, sans-serif' }}
       className="hidden lg:block w-80 flex-shrink-0"
     >
@@ -89,7 +89,7 @@ export function GroupsInterestSidebar() {
         {/* Botón de Buk (Estilo Footer del Sidebar) */}
         <div className="mt-10 pt-6 border-t border-white/10">
           <a
-            href="https://castillaagricola.buk.co"
+            href="https://agricolas.buk.co/trabaja-con-nosotros"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white hover:text-red-200 transition-colors group"

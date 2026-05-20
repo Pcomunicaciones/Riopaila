@@ -9,11 +9,18 @@ import {
   FileText, 
   ExternalLink 
 } from "lucide-react"
+import dynamic from 'next/dynamic'
+
+// Carga dinámica para evitar errores de hidratación y asegurar visibilidad
+const TransparencyForm = dynamic(() => import("@/components/TransparencyForm").then(mod => mod.TransparencyForm), { 
+  ssr: false,
+  loading: () => <div className="h-96 w-full bg-gray-50 animate-pulse rounded-[2rem] border border-gray-100" />
+})
+
 
 // --- COMPONENTE: Tarjeta Estándar (Actualizado a paleta roja) ---
 const DataCard = ({ title, children }: { title: string, children: React.ReactNode }) => (
   <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm overflow-hidden mb-8">
-    {/* Fondo de la cabecera cambiado a rojo muy claro */}
     <div className="bg-red-50/50 px-8 py-5 border-b border-gray-100">
       <h3 className="text-red-800 font-bold text-sm uppercase tracking-widest">{title}</h3>
     </div>
@@ -47,20 +54,20 @@ export default function LineaTransparentePage() {
       
       {/* HEADER DINÁMICO / CONTENEDOR ROJO OSCURO */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative w-full min-h-[160px] py-10 bg-red-800 rounded-3xl overflow-hidden mb-10 flex items-center px-10 shadow-xl shadow-red-900/10"
+        className="relative w-full min-h-[140px] py-10 bg-red-800 rounded-3xl overflow-hidden mb-10 flex items-center px-10 shadow-xl shadow-red-900/10"
       >
         <div className="relative z-10 flex flex-col md:flex-row items-center gap-6">
           <div className="p-4 bg-white/10 backdrop-blur-md rounded-2xl text-red-300 border border-white/20 shrink-0">
-            <ShieldAlert size={48} strokeWidth={1.5} />
+            <ShieldAlert size={40} strokeWidth={1.5} />
           </div>
           <div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-white uppercase italic tracking-tighter leading-none">
+            <h1 className="text-3xl lg:text-4xl font-bold text-white uppercase italic tracking-tighter leading-none">
               Línea Transparente
             </h1>
-            <p className="text-white/80 text-base md:text-lg border-l-4 border-red-400 pl-5 max-w-2xl mt-4">
+            <p className="text-white/80 text-sm md:text-base border-l-4 border-red-400 pl-5 max-w-2xl mt-4">
               Canal de denuncias éticas y reporte de irregularidades.
             </p>
           </div>
@@ -74,43 +81,43 @@ export default function LineaTransparentePage() {
       >
         {/* TARJETA 1: INTRODUCCIÓN */}
         <DataCard title="Nuestro Compromiso">
-          <p className="text-gray-600 leading-relaxed text-base mb-4">
+          <p className="text-gray-600 leading-relaxed text-sm mb-4">
             En <strong className="text-red-800">Nuestra Compañía</strong> regimos nuestras actuaciones con principios éticos y valores, comprendemos que este es el único camino hacia la confianza, la consolidación de una reputación intachable y de gran aporte a la sostenibilidad.
           </p>
-          <p className="text-gray-600 leading-relaxed text-base">
+          <p className="text-gray-600 leading-relaxed text-sm">
             En consecuencia, ponemos a disposición de los accionistas, administradores, colaboradores, contratistas, clientes y a la comunidad en general canales para reportar cualquier situación que vaya en contra del Código de Ética y Conducta Empresarial, el Código de Mejores Prácticas Corporativas, incumplimiento de normas internas y externas.
           </p>
         </DataCard>
 
-        <div className="grid md:grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           {/* SITUACIONES REPORTABLES */}
           <DataCard title="¿Qué situaciones se deben reportar?">
-            <p className="text-sm text-gray-500 mb-6 italic">Cualquier situación que tenga que ver con:</p>
+            <p className="text-xs text-gray-500 mb-6 italic">Cualquier situación que tenga que ver con:</p>
             <div className="grid md:grid-cols-2 gap-3">
               {reportables.map((item, index) => (
                 <div key={index} className="flex items-start gap-3 p-3 bg-gray-50/50 rounded-xl hover:bg-red-50 transition-colors group">
                   <AlertTriangle size={18} className="text-orange-500 mt-0.5 shrink-0 group-hover:text-red-700 transition-colors" />
-                  <p className="text-sm text-gray-600">{item}</p>
+                  <p className="text-xs text-gray-600">{item}</p>
                 </div>
               ))}
             </div>
           </DataCard>
 
-          {/* RECOMENDACIONES Y DESCARGA (Lado a lado en pantallas grandes) */}
-          <div className="grid md:grid-cols-2 gap-8">
+          {/* RECOMENDACIONES Y DESCARGA */}
+          <div className="grid md:grid-cols-1 gap-8 mb-8">
             <DataCard title="Recomendaciones para el reporte">
               <div className="space-y-4">
                 {recomendaciones.map((rec, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2 size={20} className="text-red-600 mt-0.5 shrink-0" />
-                    <p className="text-sm text-gray-600 leading-relaxed">{rec}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">{rec}</p>
                   </div>
                 ))}
               </div>
             </DataCard>
 
-            {/* TARJETA: CÓDIGO DE ÉTICA (LINK AL PDF) */}
-            <div className="bg-gradient-to-br from-red-800 to-red-600 p-8 rounded-[2rem] text-white shadow-xl relative overflow-hidden group h-fit">
+            {/* TARJETA: CÓDIGO DE ÉTICA */}
+            <div className="bg-gradient-to-br from-red-800 to-red-600 p-8 rounded-[2rem] text-white shadow-xl relative overflow-hidden group">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:bg-red-400/20 transition-colors duration-500" />
               
               <div className="relative z-10">
@@ -133,6 +140,17 @@ export default function LineaTransparentePage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* SECCIÓN DEL FORMULARIO - INTEGRADA EN EL FLUJO NATURAL */}
+        <div className="mt-16 pt-10 border-t border-gray-100">
+          <div className="flex flex-col items-center mb-10">
+            <h1 className="text-3xl font-black text-red-900 uppercase tracking-tighter text-center italic">
+              Realizar un Reporte
+            </h1>
+            <div className="w-20 h-1.5 bg-red-600 rounded-full mt-3" />
+          </div>
+          <TransparencyForm />
         </div>
       </motion.div>
     </div>
