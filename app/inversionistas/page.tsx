@@ -922,7 +922,8 @@ const InformeGestionView = () => (
 //VISTA: ESTADOS FINANCIEROS
 const EstadosFinancierosView = () => {
   const archivos = [
-    { year: "2025", file: "RIOP-EEFF-Consolidados-Dic-2025-2-1.pdf" },
+    { year: "2025 Separados", file: "Riopaila EEFF Año 2025.pdf" },
+    { year: "2025 Consolidados", file: "RIOP-EEFF-Consolidados-Dic-2025-2-1.pdf" },
     { year: "2024", file: "RIOP-EEFF-Consolidados-Junio-2024-PROJD.pdf" },
     { year: "2023", file: "Riopaila-Estados-Financieros-Ano-2023.pdf" },
     { year: "2022", file: "RIOPAILA-EEFF-Separados-y-Consolidados.pdf" },
