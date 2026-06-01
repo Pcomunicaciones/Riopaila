@@ -146,11 +146,9 @@ export default function LineaTransparentePage() {
         <div className="mt-16 pt-10 border-t border-gray-100">
           <div className="flex flex-col items-center mb-10">
             <h1 className="text-3xl font-black text-red-900 uppercase tracking-tighter text-center italic">
-              Realizar un Reporte
             </h1>
             <div className="w-20 h-1.5 bg-red-600 rounded-full mt-3" />
           </div>
-          <TransparencyForm />
         </div>
       </motion.div>
     </div>

@@ -34,7 +34,7 @@ const sustainabilitySubmenu = [
 const groupsSubmenu = [
   { name: "Proveedores / Clientes", href: "/grupos-de-interes/proveedores-clientes" },
   { name: "Talento (Trabaje con nosotros)", href: "/grupos-de-interes/talento" },
-  { name: "Portal de Autogestión Buk", href: "https://castillaagricola.buk.co", isExternal: true },
+  { name: "Portal de Autogestión Buk", href: "https://agricolas.buk.co/trabaja-con-nosotros", isExternal: true },
 ]
 
 const contactSubmenu = [
