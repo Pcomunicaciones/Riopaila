@@ -922,7 +922,7 @@ const InformeGestionView = () => (
 //VISTA: ESTADOS FINANCIEROS
 const EstadosFinancierosView = () => {
   const archivos = [
-    { year: "2025", file: "Riopaila EEFF Año 2025.pdf" },    
+    { year: "2025", file: "Riopaila EEFF Año 2025.pdf" },
     { year: "2024", file: "RIOP-EEFF-Consolidados-Junio-2024-PROJD.pdf" },
     { year: "2023", file: "Riopaila-Estados-Financieros-Ano-2023.pdf" },
     { year: "2022", file: "RIOPAILA-EEFF-Separados-y-Consolidados.pdf" },
@@ -958,6 +958,8 @@ const InformesTrimestralesView = () => {
     //2026
     { title: "EEFF Consolidados Marzo 2026", doc: "RIOP EFFF Consolidados Marzo 2026.pdf" },
     { title: "EEFF Separados Marzo 2026", doc: "RIOP EEFF Separados Marzo 2026.pdf" },
+    { title: "EEFF Consolidados Junio 2026", doc: "RIOP EFFF Consolidados Junio 2026.pdf" },
+    { title: "EEFF Separados Junio 2026", doc: "RIOP EEFF Separados Junio 2026.pdf" },
     // 2025
     { title: "EEFF Consolidados Septiembre 2025", doc: "AS-8294-25-Riopaila-Agricola-EFFF-completos-Consolidados-Septiembre-2025.pdf" },
     { title: "EEFF Separados Septiembre 2025", doc: "AS-8285-25-Riopaila-Agricola-EEFF-completos-Separados-Septiembre-2025.pdf" },
